@@ -1,0 +1,27 @@
+$secondary: #f3ebe2;
+$col-milch: #fbf8f4;
+$col-cream: #e7d7c5;
+$primary-text: #2b2b2b;
+$heading-text: #120d07;
+$third: #594024;
+$linkout: #a37642;
+
+%mg_au {
+  margin: 0 auto;
+}
+%ta_center {
+  text-align: center;
+}
+%hero {
+  position: relative;
+  width: 100%;
+  align-items: center;
+  background-size: cover;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  @include media('<=tablet') {
+    background-attachment: scroll;
+  }
+}

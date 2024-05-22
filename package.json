@@ -9,12 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "gsap": "^3.12.5",
+    "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.3"
+    "splitting": "^1.0.6"
   },
   "devDependencies": {
     "eslint": "^8",
-    "eslint-config-next": "14.2.3"
+    "eslint-config-next": "14.2.3",
+    "sass": "^1.77.2"
   }
 }

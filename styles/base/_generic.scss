@@ -1,0 +1,76 @@
+.flex {
+  display: flex;
+}
+span.word_wrap {
+  overflow: hidden;
+  display: inline-block;
+  line-height: 1.6rem;
+}
+[data-animation='h'] span.word {
+  overflow-y: hidden;
+  position: relative;
+}
+[data-animation='opacIn'] span.word {
+  position: relative;
+  overflow: auto !important;
+}
+.y__link {
+  [data-animation='h'] .char:after {
+    visibility: visible;
+    top: 100%;
+    left: 0;
+  }
+}
+.child_wrap {
+  margin: 0 auto;
+  width: 85%;
+  @include media('<=tablet') {
+    width: 90%;
+  }
+}
+.rm-tab {
+  @include media('<=tablet') {
+    display: none;
+  }
+}
+.rm-mobile {
+  @include media('<=phone-tab') {
+    display: none;
+  }
+}
+.full-width-tab {
+  @include media('<=phone-tab') {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.abs {
+  position: absolute;
+}
+.ta_center {
+  text-align: center;
+}
+.mg_au {
+  margin: 0 auto;
+}
+.img {
+  position: relative;
+  overflow: hidden;
+  img {
+    z-index: 2;
+  }
+}
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: $secondary;
+}
+::selection {
+  background-color: $linkout;
+  color: $third;
+}

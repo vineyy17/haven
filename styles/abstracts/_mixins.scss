@@ -1,0 +1,88 @@
+@import './breakpoints.scss';
+
+@mixin flex($jc, $ai, $gap) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $gap;
+}
+
+@mixin flex_col($gap) {
+  flex-direction: column;
+  display: flex;
+  gap: $gap;
+}
+
+@function toRem($value) {
+  $remValue: (calc($value / 16)) + rem;
+  @return $remValue;
+}
+
+@mixin heading-2 {
+  font-size: 4rem;
+  color: $heading-text;
+  @include star;
+  @include media('<=phone-tab') {
+    font-size: toRem(43);
+    letter-spacing: -0.2px;
+  }
+}
+
+@mixin heading-4 {
+  font-size: toRem(35);
+  color: $heading-text;
+  font-weight: 700;
+  line-height: 2.5rem;
+  @include media('<=phone-tab') {
+    font-weight: 900;
+    font-size: toRem(25);
+    line-height: toRem(29);
+  }
+}
+
+@mixin cont {
+  width: 70%;
+  margin: 0 auto;
+  padding: 6rem 0;
+  @include flex_col(11rem);
+
+  a {
+    text-transform: uppercase;
+    font-size: toRem(23);
+    @include media('<=phone-tab') {
+      font-size: toRem(20);
+    }
+  }
+  @include media('<=tablet') {
+    width: 90%;
+    @include flex_col(10rem);
+  }
+  @include media('<=phone-tab') {
+    width: 100%;
+    @include flex_col(8rem);
+  }
+}
+
+@mixin link {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    border-radius: 5px;
+    height: 0.05em;
+    bottom: 0;
+    left: 0;
+    background: $col-cream;
+    transform-origin: bottom right;
+    transition: transform 0.35s ease-out;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
