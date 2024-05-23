@@ -1,0 +1,65 @@
+@use '/styles/main.scss' as *;
+
+.main {
+  position: relative;
+  z-index: 2;
+  left: -0.4rem;
+
+  @include media('<=phone-tab') {
+    //   margin-top: max(5rem, 50px);
+    left: -0.1rem;
+  }
+
+  &__heading {
+    font-size: 28vw;
+    white-space: nowrap;
+    line-height: 1;
+    letter-spacing: -0.6rem;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 900;
+    color: $col-cream;
+    font-family: var(--font-playfair);
+
+    @include media('<=tablet') {
+      //   font-size: 12rem;
+      margin-right: 0rem;
+    }
+    @include media('<=phone-tab') {
+      //   font-size: 28vw;
+      line-height: 1;
+      letter-spacing: -0.1rem;
+    }
+  }
+
+  &__about {
+    margin-left: max(40px, 8rem);
+    // margin-bottom: max(40px, 10rem);
+    // width: max(250px, 28.7rem);
+
+    @include media('<=tablet') {
+      //   margin-top: max(40px, 8rem);
+      margin-left: 0;
+    }
+
+    &__text {
+      text-align: left;
+      color: white;
+      line-height: 143%;
+      margin-bottom: max(10px, 1.5rem);
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: -0.02rem;
+      font-size: 1.1rem;
+
+      @include media('<=tablet') {
+        text-align: center;
+      }
+
+      @include media('<=phone-tab') {
+        text-align: center;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

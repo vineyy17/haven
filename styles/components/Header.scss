@@ -4,8 +4,11 @@ header {
   @include flex(space-between, center, 0);
   padding: 1.5rem 0;
   margin: 0 auto;
+  position: relative;
+  z-index: 5;
+
   .y__logo {
-    color: inherit;
+    color: white;
     font-family: var(--font-playfair), serif;
     font-weight: 600;
     cursor: pointer;
@@ -17,26 +20,26 @@ header {
     @include flex(center, center, 1.5rem);
     li {
       list-style: none;
-      color: black;
+      color: white;
       text-transform: uppercase;
       font-size: toRem(17);
       @include link;
       a {
         text-decoration: none;
-        color: inherit;
+        color: white;
       }
     }
     @include media('<=tablet') {
       display: none;
     }
   }
-  //   .y_linkout {
-  //     text-transform: uppercase;
-  //     font-size: toRem(22);
-  //     @include media('<=tablet') {
-  //       display: none;
-  //     }
+  // .y_linkout {
+  //   text-transform: uppercase;
+  //   font-size: toRem(22);
+  //   @include media('<=tablet') {
+  //     display: none;
   //   }
+  // }
 }
 .menu_btn {
   display: none;
