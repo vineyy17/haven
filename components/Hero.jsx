@@ -2,15 +2,30 @@
 
 import { split } from '@/animations/text';
 import '@/styles/components/Hero.scss';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
 
 const Hero = () => {
+  const app = useRef(null);
   useEffect(() => {
-    split();
-  });
+    const tl = gsap.timeline();
+    const init = () => {
+      tl.from(app.current, { ease: 'linear', autoAlpha: 0 }).to(app.current, {
+        ease: 'linear',
+        autoAlpha: 1,
+      });
+      split();
+    };
+
+    init();
+
+    // window.addEventListener('load', function (e) {
+    //   init();
+    // });
+  }, []);
 
   return (
-    <div className="main">
+    <div className="main" ref={app}>
       <p className="main__heading" data-animation="bounce">
         HAVEN
       </p>
