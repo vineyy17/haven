@@ -2,12 +2,10 @@
 
 'use client';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import '@/styles/components/Header.scss';
 import AnimatedLink from './AnimatedLink';
-import menu from '@/assets/menu.svg';
-import menu_b from '@/assets/menu_b.svg';
 import { split } from '@/animations/text';
 import { Transition } from 'react-transition-group';
 import gsap from 'gsap';
@@ -54,6 +52,10 @@ const Header = (logoColor, linkColor) => {
     setShowMenu(false);
     setInProp(false);
   };
+
+  useEffect(() => {
+    split();
+  });
 
   return (
     <>

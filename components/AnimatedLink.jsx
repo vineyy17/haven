@@ -46,7 +46,7 @@ const AnimatedLink = ({ color, url, children, type }) => {
             type === 'header' && 'y__link_txt_hidden'
           } ${type === 'socials' && 'y__link_txt_mobilenav'}`}
           ref={textRef}
-          data-animation="h"
+          // data-animation="h"
         >
           {children}
         </span>
