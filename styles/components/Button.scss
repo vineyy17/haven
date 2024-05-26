@@ -20,7 +20,9 @@
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: -0.02rem;
-  font-size: 0.9rem;
+  //   font-size: 0.9rem;
+
+  font-size: max(14px, 0.9rem);
 
   @include media('<=tablet') {
     margin: 0 auto;

@@ -19,7 +19,7 @@ $linkout: #a37642;
   background-size: cover;
   text-align: center;
   background-repeat: no-repeat;
-  // background-position: center;
+  background-position: top;
   background-attachment: fixed;
   @include media('<=tablet') {
     background-attachment: scroll;
