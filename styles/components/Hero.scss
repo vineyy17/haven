@@ -6,6 +6,7 @@
   left: -0.4rem;
   visibility: hidden;
   opacity: 0;
+  overflow-x: hidden;
 
   @include media('<=phone-tab') {
     //   margin-top: max(5rem, 50px);

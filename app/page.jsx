@@ -1,11 +1,18 @@
-import Header from '@/components/Header';
+'use client';
+
 import Hero from '@/components/Hero';
-import '@/styles/pages/Homepage.scss';
+import { useEffect } from 'react';
+import { split } from '@/animations/text';
+import scroll from '@/animations/scroll';
 
 const HomePage = () => {
+  useEffect(() => {
+    scroll();
+    split();
+  }, []);
+
   return (
-    <div className="homePage">
-      <Header />
+    <div>
       <Hero />
     </div>
   );

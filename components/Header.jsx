@@ -53,9 +53,9 @@ const Header = (logoColor, linkColor) => {
     setInProp(false);
   };
 
-  useEffect(() => {
-    split();
-  });
+  // useEffect(() => {
+  //   split();
+  // });
 
   return (
     <>

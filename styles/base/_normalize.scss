@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 html {
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
   font-size: calc(100vw / 1440 * 16);
   @include media('<=tablet') {
     font-size: calc(100vw / 475 * 10);
