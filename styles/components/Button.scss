@@ -1,0 +1,68 @@
+@use '/styles/main.scss' as *;
+
+.c-button {
+  display: flex;
+  padding: 0.5rem 2rem 0.5rem 3rem;
+  border-radius: 99rem;
+  background-color: transparent;
+  transition: all 0.5s ease;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+
+  border: 1px solid white;
+  cursor: pointer;
+
+  text-align: left;
+  color: white;
+  line-height: 143%;
+  margin-bottom: max(10px, 1.5rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.02rem;
+  font-size: 0.9rem;
+
+  @include media('<=tablet') {
+    margin: 0 auto;
+  }
+
+  @include media('<=phone-tab') {
+    margin: 0 auto;
+    font-size: 0.8rem;
+    padding: 0.1rem 0.5rem 0.1rem 1.5rem;
+  }
+
+  &__icon {
+    height: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      background: white;
+      border-radius: 100%;
+      padding: 0rem;
+
+      width: 0rem;
+      height: 0rem;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      transform: rotate(-180deg);
+
+      transition: all 0.5s ease;
+    }
+  }
+}
+
+.c-button:hover .c-button__icon span {
+  transform: rotate(0deg);
+
+  border-radius: 100%;
+  padding: 0.6rem;
+  width: 1.9rem;
+  height: 1.9rem;
+}

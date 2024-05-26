@@ -4,6 +4,7 @@ import { split } from '@/animations/text';
 import '@/styles/components/Hero.scss';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import Button from './Button';
 
 const Hero = () => {
   const app = useRef(null);
@@ -43,6 +44,7 @@ const Hero = () => {
             crafted to add a touch of sophistication.{' '}
           </span>
         </p>
+        <Button>Explore Collection</Button>
       </div>
     </div>
   );
