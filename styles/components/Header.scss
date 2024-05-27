@@ -8,7 +8,7 @@ header {
   z-index: 5;
 
   .y__logo {
-    color: white;
+    color: $col-milch;
     font-family: var(--font-playfair), serif;
     font-weight: 600;
     cursor: pointer;
@@ -20,13 +20,13 @@ header {
     @include flex(center, center, 1.5rem);
     li {
       list-style: none;
-      color: white;
+      color: $col-milch;
       text-transform: uppercase;
       font-size: toRem(17);
       @include link;
       a {
         text-decoration: none;
-        color: white;
+        color: $col-milch;
       }
     }
     @include media('<=tablet') {
@@ -90,7 +90,7 @@ header {
       @include flex_col(2rem);
       align-items: flex-start;
       a {
-        color: white;
+        color: $col-milch;
         text-decoration: none;
         font-family: var(--font-manrope);
         font-weight: 500;
@@ -115,7 +115,7 @@ header {
       flex-wrap: wrap;
       align-content: flex-start;
       a {
-        color: white;
+        color: $col-milch;
         text-transform: uppercase;
         font-size: toRem(15);
       }

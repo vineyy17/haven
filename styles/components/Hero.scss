@@ -45,7 +45,7 @@
 
     &__text {
       text-align: left;
-      color: white;
+      color: $col-milch;
       line-height: 143%;
       margin-bottom: max(10px, 1.5rem);
       font-weight: 400;
@@ -64,6 +64,33 @@
         text-align: center;
         font-size: 0.8rem;
         margin-bottom: 1rem;
+      }
+    }
+
+    &__box {
+      width: fit-content;
+      text-transform: uppercase;
+      text-align: right;
+      line-height: 1.2;
+      margin: 0 auto;
+      transform: translateX(-100px);
+
+      @include media('<=tablet') {
+        transform: translateX(0px);
+      }
+
+      h1 {
+        font-size: 3.6rem;
+        letter-spacing: -0.05em;
+        font-family: var(--font-manrope);
+        color: $col-milch;
+        font-weight: 400;
+        margin-top: 4rem;
+
+        @include media('<=tablet') {
+          font-size: 2.3rem;
+          margin-top: 2rem;
+        }
       }
     }
   }

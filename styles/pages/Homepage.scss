@@ -1,7 +1,7 @@
 @use '/styles/main.scss' as *;
 
 .homePage {
-  min-height: 150vh;
+  min-height: 200vh;
   //   @include flex_col(2rem);
   @extend %hero;
   @include media('<=phone-tab') {

@@ -18,7 +18,7 @@
     display: inline-block;
   }
   &_txt {
-    color: white;
+    color: $col-milch;
     font-family: var(--font-playfair), serif;
     font-weight: 600;
 
@@ -46,7 +46,7 @@
     }
   }
   svg {
-    fill: white;
+    fill: $col-milch;
     position: relative;
     top: 0.1rem;
     width: 1.2rem;
