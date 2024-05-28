@@ -8,12 +8,17 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Button from './Button';
 import Header from './Header';
+import dynamic from 'next/dynamic';
+const Scene = dynamic(() => import('@/components/Scene'), {
+  ssr: false,
+});
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
   const app = useRef(null);
   const title = useRef(null);
+  const image = useRef(null);
   const container = useRef(null);
 
   useEffect(() => {
@@ -35,7 +40,7 @@ const Hero = () => {
       const context = gsap.context(() => {
         const tl = gsap.timeline({
           scrollTrigger: {
-            trigger: title.current,
+            trigger: container.current,
             start: 'top 100%',
             end: 'bottom top',
             scrub: 1,
@@ -43,7 +48,11 @@ const Hero = () => {
           },
         });
 
-        tl.fromTo(title.current, { y: 0 }, { y: -200, duration: 2 });
+        tl.fromTo(title.current, { y: 0 }, { y: -200, duration: 2 }).fromTo(
+          image.current,
+          { y: -250 },
+          { y: -600, duration: 2 },
+        );
       });
 
       return () => context.revert();
@@ -53,7 +62,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="homePage" ref={container}>
+    <div className="homePage">
       <Header />
       <div className="main" ref={app}>
         <p className="main__heading" data-animation="bounce">
@@ -77,13 +86,19 @@ const Hero = () => {
             <Button>Explore Collection</Button>
           </div>
 
-          <div className="main__about__box">
-            <h1 ref={title}>
-              <span data-animation="blurIn">TIMELESS DESIGN </span> <br />
-              <span data-animation="blurIn"> INSPIRATION: LASTING </span> <br />
-              <span data-animation="blurIn"> COLLECTIONS FOR </span> <br />
-              <span data-animation="blurIn"> YOUR SPACE </span>
-            </h1>
+          <div ref={container}>
+            <div className="main__about__box">
+              <h1 ref={title}>
+                <span data-animation="blurIn">TIMELESS DESIGN </span> <br />
+                <span data-animation="blurIn"> INSPIRATION: LASTING </span>{' '}
+                <br />
+                <span data-animation="blurIn"> COLLECTIONS FOR </span> <br />
+                <span data-animation="blurIn"> YOUR SPACE </span>
+              </h1>
+            </div>
+            <div ref={image} className="main__about__model">
+              <Scene />
+            </div>
           </div>
         </div>
       </div>

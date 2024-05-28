@@ -34,19 +34,21 @@
   }
 
   &__about {
-    margin-left: max(40px, 8rem);
+    margin-left: max(40px, 6rem);
+    margin-top: 1rem;
     // margin-bottom: max(40px, 10rem);
     // width: max(250px, 28.7rem);
 
     @include media('<=tablet') {
       margin-left: 0;
+      margin-top: 0;
     }
 
     &__text {
       text-align: left;
       color: $col-milch;
       line-height: 143%;
-      margin-bottom: max(10px, 1.5rem);
+      margin-bottom: max(5px, 0.7rem);
       font-weight: 400;
       text-transform: uppercase;
       letter-spacing: -0.02rem;
@@ -119,6 +121,10 @@
           letter-spacing: -0.04em;
         }
       }
+    }
+
+    &__model {
+      height: 100vh;
     }
   }
 }
