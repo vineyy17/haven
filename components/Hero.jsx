@@ -43,7 +43,7 @@ const Hero = () => {
           },
         });
 
-        tl.fromTo(title.current, { y: 0 }, { y: -200, duration: 2 }); // Increase duration
+        tl.fromTo(title.current, { y: 0 }, { y: -200, duration: 2 });
       });
 
       return () => context.revert();
@@ -73,13 +73,16 @@ const Hero = () => {
               crafted to add a touch of sophistication.{' '}
             </span>
           </p>
-          <Button>Explore Collection</Button>
+          <div className="main__about__button">
+            <Button>Explore Collection</Button>
+          </div>
+
           <div className="main__about__box">
             <h1 ref={title}>
-              <span data-animation="h">TIMELESS DESIGN </span> <br />
-              <span data-animation="h"> INSPIRATION: LASTING </span> <br />
-              <span data-animation="h"> COLLECTIONS FOR </span> <br />
-              <span data-animation="h"> YOUR SPACE </span>
+              <span data-animation="blurIn">TIMELESS DESIGN </span> <br />
+              <span data-animation="blurIn"> INSPIRATION: LASTING </span> <br />
+              <span data-animation="blurIn"> COLLECTIONS FOR </span> <br />
+              <span data-animation="blurIn"> YOUR SPACE </span>
             </h1>
           </div>
         </div>

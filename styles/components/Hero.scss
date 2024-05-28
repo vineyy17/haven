@@ -39,7 +39,6 @@
     // width: max(250px, 28.7rem);
 
     @include media('<=tablet') {
-      //   margin-top: max(40px, 8rem);
       margin-left: 0;
     }
 
@@ -56,14 +55,25 @@
       font-size: max(14px, 0.9rem);
 
       @include media('<=tablet') {
-        text-align: center;
+        // text-align: center;
         margin-top: 2rem;
+        margin-left: max(30px, 4rem);
       }
 
       @include media('<=phone-tab') {
-        text-align: center;
+        margin-left: max(5px, 0.7rem);
         font-size: 0.8rem;
         margin-bottom: 1rem;
+      }
+    }
+
+    &__button {
+      @include media('<=tablet') {
+        margin-left: max(30px, 4rem);
+      }
+
+      @include media('<=phone-tab') {
+        margin-left: max(5px, 0.7rem);
       }
     }
 
@@ -79,17 +89,34 @@
         transform: translateX(0px);
       }
 
+      @include media('<=phone-tab') {
+        // transform: translateX(-20px);
+        margin: 0;
+        margin-left: max(5px, 0.7rem);
+      }
+
       h1 {
-        font-size: 3.6rem;
+        font-size: 3.5rem;
         letter-spacing: -0.05em;
         font-family: var(--font-manrope);
         color: $col-milch;
         font-weight: 400;
-        margin-top: 4rem;
+        margin-top: 5rem;
 
         @include media('<=tablet') {
           font-size: 2.3rem;
-          margin-top: 2rem;
+          margin-top: 3.3rem;
+        }
+
+        @include media('<=tablet') {
+          font-size: 2.3rem;
+          margin-top: 3.3rem;
+        }
+
+        @include media('<=phone-tab') {
+          font-size: 2rem;
+          margin-top: 2.8rem;
+          letter-spacing: -0.04em;
         }
       }
     }

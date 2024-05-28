@@ -18,7 +18,7 @@ export const split = () => {
       const wrappedLines = splitResult.words
         .map(
           (wordsArr) => `
-                       <span class="word_wrap">
+                       <span className="word_wrap">
                              ${wordsArr.outerHTML}
                         </span>`,
         )
@@ -54,7 +54,7 @@ export const split = () => {
       const wrappedLines = splitResult.words
         .map(
           (wordsArr) => `
-                       <span class="word_wrap">
+                       <span className="word_wrap">
                              ${wordsArr.outerHTML}
                         </span>`,
         )
