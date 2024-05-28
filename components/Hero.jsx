@@ -50,8 +50,9 @@ const Hero = () => {
 
         tl.fromTo(title.current, { y: 0 }, { y: -200, duration: 2 }).fromTo(
           image.current,
-          { y: -250 },
-          { y: -600, duration: 2 },
+          { y: -180 },
+          { y: -280, duration: 2 },
+          '<+=85%',
         );
       });
 
@@ -90,8 +91,7 @@ const Hero = () => {
             <div className="main__about__box">
               <h1 ref={title}>
                 <span data-animation="blurIn">TIMELESS DESIGN </span> <br />
-                <span data-animation="blurIn"> INSPIRATION: LASTING </span>{' '}
-                <br />
+                <span data-animation="blurIn"> ELEMENTS: LASTING </span> <br />
                 <span data-animation="blurIn"> COLLECTIONS FOR </span> <br />
                 <span data-animation="blurIn"> YOUR SPACE </span>
               </h1>

@@ -6,7 +6,7 @@ import { useTexture, useAspect } from '@react-three/drei';
 
 const Model = () => {
   const image = useRef();
-  const texture = useTexture('/images/880.jpg');
+  const texture = useTexture('/images/875.jpg');
   const { width, height } = texture.image;
   const scale = useAspect(width, height, 0.3);
 
