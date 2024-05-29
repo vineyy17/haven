@@ -96,8 +96,8 @@
 
       @include media('<=phone-tab') {
         // transform: translateX(-20px);
-        margin: 0;
-        margin-left: max(5px, 0.7rem);
+        // margin: 0;
+        padding-right: max(10px, 1.5rem);
       }
 
       h1 {
@@ -129,6 +129,31 @@
     &__model {
       height: 28rem;
       // margin-right: max(40px, 6rem);
+    }
+
+    &__footerText {
+      font-size: 3.5rem;
+      letter-spacing: -0.05em;
+      font-family: var(--font-manrope);
+      color: $col-milch;
+      font-weight: 400;
+      margin-top: 8rem;
+
+      @include media('<=tablet') {
+        font-size: 2.3rem;
+        margin-top: 3.3rem;
+      }
+
+      @include media('<=tablet') {
+        font-size: 2.3rem;
+        margin-top: 3.3rem;
+      }
+
+      @include media('<=phone-tab') {
+        font-size: 2rem;
+        margin-top: 2.8rem;
+        letter-spacing: -0.04em;
+      }
     }
   }
 }
