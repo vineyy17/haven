@@ -19,6 +19,7 @@ const Hero = () => {
   const app = useRef(null);
   const title = useRef(null);
   const footerText = useRef(null);
+  const footer = useRef(null);
   const image = useRef(null);
   const container = useRef(null);
 
@@ -49,19 +50,18 @@ const Hero = () => {
           },
         });
 
-        tl.fromTo(title.current, { y: 0 }, { y: -200, duration: 2 })
-          .fromTo(
-            image.current,
-            { y: -180 },
-            { y: -280, duration: 2 },
-            '<+=85%',
-          )
-          .fromTo(
-            footerText.current,
-            { y: -290 },
-            { y: -390, duration: 2 },
-            '<',
-          );
+        tl.fromTo(title.current, { y: 0 }, { y: -300, duration: 2 }).fromTo(
+          footer.current,
+          { y: -180 },
+          { y: -430, duration: 2 },
+          '<+=41%',
+        );
+        // .fromTo(
+        //   footerText.current,
+        //   { y: -280 },
+        //   { y: -380, duration: 2 },
+        //   '<',
+        // );
       });
 
       return () => context.revert();
@@ -104,16 +104,19 @@ const Hero = () => {
                 <span data-animation="blurIn"> YOUR SPACE </span>
               </h1>
             </div>
-            <div ref={image} className="main__about__model">
-              <Scene />
+
+            <div ref={footer}>
+              <div ref={image} className="main__about__model">
+                <Scene />
+              </div>
+              <h1
+                ref={footerText}
+                className="main__about__footerText"
+                data-animation="blurIn"
+              >
+                LUXURY AT YOUR DOORSTEP
+              </h1>
             </div>
-            <h1
-              ref={footerText}
-              className="main__about__footerText"
-              data-animation="blurIn"
-            >
-              LUXURY AT YOUR DOORSTEP
-            </h1>
           </div>
         </div>
       </div>

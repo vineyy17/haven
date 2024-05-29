@@ -137,7 +137,7 @@
       font-family: var(--font-manrope);
       color: $col-milch;
       font-weight: 400;
-      margin-top: 8rem;
+      // margin-top: 8rem;
 
       @include media('<=tablet') {
         font-size: 2.3rem;
