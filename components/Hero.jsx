@@ -9,6 +9,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Button from './Button';
 import Header from './Header';
 import dynamic from 'next/dynamic';
+import { useMediaQuery } from 'react-responsive';
+import Image from 'next/image';
+import imageSrc from '@/assets/images/875.jpg';
+
 const Scene = dynamic(() => import('@/components/Scene'), {
   ssr: false,
 });
@@ -22,6 +26,8 @@ const Hero = () => {
   const footer = useRef(null);
   const image = useRef(null);
   const container = useRef(null);
+
+  const isDesktop = useMediaQuery({ query: '(min-width: 768px)' });
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -107,7 +113,20 @@ const Hero = () => {
 
             <div ref={footer}>
               <div ref={image} className="main__about__model">
-                <Scene />
+                {isDesktop ? (
+                  <Scene />
+                ) : (
+                  // <div className="main__about__model__imageBox">
+                  <Image
+                    height={300}
+                    width={230}
+                    src={imageSrc}
+                    alt="Model"
+                    placeholder="blur"
+                    className="main__about__model__image"
+                  />
+                  // </div>
+                )}
               </div>
               <h1
                 ref={footerText}

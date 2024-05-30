@@ -18,7 +18,7 @@
     display: inline-block;
   }
   &_txt {
-    color: $col-milch;
+    color: $col-cream;
     font-family: var(--font-playfair), serif;
     font-weight: 600;
 
@@ -26,6 +26,14 @@
     text-transform: uppercase;
     @include media('<=tablet') {
       display: none;
+    }
+
+    &--cream {
+      color: $col-cream;
+    }
+
+    &--milch {
+      color: $col-milch;
     }
 
     &_hidden {
@@ -46,7 +54,7 @@
     }
   }
   svg {
-    fill: $col-milch;
+    fill: $col-cream;
     position: relative;
     top: 0.1rem;
     width: 1.2rem;

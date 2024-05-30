@@ -42,9 +42,9 @@ const AnimatedLink = ({ color, url, children, type }) => {
     >
       <span className="y__link_wrap">
         <span
-          className={`y__link_txt ${
+          className={`y__link_txt y__link_txt--${color} ${
             type === 'header' && 'y__link_txt_hidden'
-          } ${type === 'socials' && 'y__link_txt_mobilenav'}`}
+          } ${type === 'socials' && 'y__link_txt_mobilenav'} `}
           ref={textRef}
           // data-animation="h"
         >

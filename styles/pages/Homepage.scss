@@ -2,13 +2,13 @@
 
 .homePage {
   // min-height: 120vh;
-  height: 195vh;
+  height: 190vh;
   // max-height: 215vh;
   //   @include flex_col(2rem);
   @extend %hero;
   @include media('<=phone-tab') {
     @include flex_col(1.5rem);
-    min-height: 100vh;
+    height: fit-content;
   }
   background-image: url('../../assets/images/Hero\ Image.png');
   background-blend-mode: darken;

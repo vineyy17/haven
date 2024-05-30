@@ -62,15 +62,24 @@ const Header = (logoColor, linkColor) => {
       <header className="y__header child_wrap animate__fadeIn animate__animated animate__delay-0.5s">
         <p className="y__logo">Haven</p>
         <ul>
-          <AnimatedLink type="header">Home</AnimatedLink>
-          <AnimatedLink type="header">Listings</AnimatedLink>
-          <AnimatedLink type="header">Deals</AnimatedLink>
-          <AnimatedLink type="header">About</AnimatedLink>
-          <AnimatedLink type="header">Contact</AnimatedLink>
-          <AnimatedLink type="header">Search</AnimatedLink>
+          <AnimatedLink type="header" color="milch">
+            Home
+          </AnimatedLink>
+          <AnimatedLink type="header" color="milch">
+            Shop
+          </AnimatedLink>
+          <AnimatedLink type="header" color="milch">
+            About
+          </AnimatedLink>
+          <AnimatedLink type="header" color="milch">
+            Contact
+          </AnimatedLink>
+          <AnimatedLink type="header" color="milch">
+            Search
+          </AnimatedLink>
         </ul>
-        <AnimatedLink type="arrowLink" color="white">
-          Login
+        <AnimatedLink type="arrowLink" color="cream">
+          Explore
         </AnimatedLink>
         <div onClick={openMenu} className="menu_btn">
           {!showMenu && !mbtn && <p className="y__logo">Menu</p>}
@@ -98,11 +107,8 @@ const Header = (logoColor, linkColor) => {
               <Link data-animation="h" href="/home">
                 Home
               </Link>
-              <Link data-animation="h" href="/listings">
-                Listings
-              </Link>
-              <Link data-animation="h" href="/deals">
-                Deals
+              <Link data-animation="h" href="/shop">
+                Shop
               </Link>
               <Link data-animation="h" href="/About">
                 About
