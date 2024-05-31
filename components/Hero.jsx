@@ -7,11 +7,11 @@ import { useEffect, useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Button from './Button';
-import Header from './Header';
 import dynamic from 'next/dynamic';
 import { useMediaQuery } from 'react-responsive';
 import Image from 'next/image';
 import imageSrc from '@/assets/images/875.jpg';
+import NavMenu from './NavMenu';
 
 const Scene = dynamic(() => import('@/components/Scene'), {
   ssr: false,
@@ -78,7 +78,7 @@ const Hero = () => {
 
   return (
     <div className="homePage">
-      <Header />
+      <NavMenu />
       <div className="main" ref={app}>
         <p className="main__heading" data-animation="bounce">
           HAVEN
@@ -104,10 +104,10 @@ const Hero = () => {
           <div ref={container}>
             <div className="main__about__box">
               <h1 ref={title}>
-                <span data-animation="blurIn">TIMELESS DESIGN </span> <br />
-                <span data-animation="blurIn"> ELEMENTS: LASTING </span> <br />
-                <span data-animation="blurIn"> COLLECTIONS FOR </span> <br />
-                <span data-animation="blurIn"> YOUR SPACE </span>
+                <span data-animation="opacIn">TIMELESS DESIGN </span> <br />
+                <span data-animation="opacIn"> ELEMENTS: LASTING </span> <br />
+                <span data-animation="opacIn"> COLLECTIONS FOR </span> <br />
+                <span data-animation="opacIn"> YOUR SPACE </span>
               </h1>
             </div>
 
@@ -131,7 +131,7 @@ const Hero = () => {
               <h1
                 ref={footerText}
                 className="main__about__footerText"
-                data-animation="blurIn"
+                data-animation="opacIn"
               >
                 LUXURY AT YOUR DOORSTEP
               </h1>
