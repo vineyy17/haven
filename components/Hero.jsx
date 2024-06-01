@@ -27,7 +27,7 @@ const Hero = () => {
   const image = useRef(null);
   const container = useRef(null);
 
-  const isDesktop = useMediaQuery({ query: '(min-width: 768px)' });
+  const isDesktop = useMediaQuery({ query: '(min-width: 1000px)' });
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -44,23 +44,23 @@ const Hero = () => {
   useLayoutEffect(() => {
     const mm = gsap.matchMedia();
 
-    mm.add('(min-width: 768px)', () => {
+    mm.add('(min-width: 1000px)', () => {
       const context = gsap.context(() => {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: container.current,
             start: 'top 100%',
             end: 'bottom top',
-            scrub: 1,
+            scrub: 4,
             ease: 'power1.out',
           },
         });
 
-        tl.fromTo(title.current, { y: 0 }, { y: -300, duration: 2 }).fromTo(
+        tl.fromTo(title.current, { y: 0 }, { y: -300 }).fromTo(
           footer.current,
           { y: -180 },
-          { y: -430, duration: 2 },
-          '<+=41%',
+          { y: -430 },
+          '<+=35%',
         );
         // .fromTo(
         //   footerText.current,
