@@ -98,16 +98,16 @@ const Hero = () => {
             </span>
           </p>
           <div className="main__about__button">
-            <Button>Explore Collection</Button>
+            <Button color="milch">Explore Collection</Button>
           </div>
 
           <div ref={container}>
             <div className="main__about__box">
               <h1 ref={title}>
-                <span data-animation="opacIn">TIMELESS DESIGN </span> <br />
-                <span data-animation="opacIn"> ELEMENTS: LASTING </span> <br />
-                <span data-animation="opacIn"> COLLECTIONS FOR </span> <br />
-                <span data-animation="opacIn"> YOUR SPACE </span>
+                <span data-animation="blurIn">TIMELESS DESIGN </span> <br />
+                <span data-animation="blurIn"> ELEMENTS: LASTING </span> <br />
+                <span data-animation="blurIn"> COLLECTIONS FOR </span> <br />
+                <span data-animation="blurIn"> YOUR SPACE </span>
               </h1>
             </div>
 
@@ -116,7 +116,6 @@ const Hero = () => {
                 {isDesktop ? (
                   <Scene />
                 ) : (
-                  // <div className="main__about__model__imageBox">
                   <Image
                     height={300}
                     width={230}
@@ -125,13 +124,12 @@ const Hero = () => {
                     placeholder="blur"
                     className="main__about__model__image"
                   />
-                  // </div>
                 )}
               </div>
               <h1
                 ref={footerText}
                 className="main__about__footerText"
-                data-animation="opacIn"
+                data-animation="blurIn"
               >
                 LUXURY AT YOUR DOORSTEP
               </h1>
