@@ -1,10 +1,7 @@
 'use client';
-
-// import Hero from '@/components/Hero';
-import { useEffect } from 'react';
-// import { split } from '@/animations/text';
 import scroll from '@/animations/scroll';
 import dynamic from 'next/dynamic';
+import { useEffect } from 'react';
 
 const Hero = dynamic(() => import('@/components/Hero'), {
   ssr: false,
@@ -30,11 +27,11 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <Hero />
       <HomeAboutSection />
       <SpecificationSection />
-    </div>
+    </>
   );
 };
 

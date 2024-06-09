@@ -1,23 +1,21 @@
 'use client';
 
-import { split } from '@/animations/text';
 import '@/styles/components/Hero.scss';
 import '@/styles/pages/Homepage.scss';
 import { useEffect, useLayoutEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { gsap } from '@/lib/gsap';
 import Button from './Button';
 import dynamic from 'next/dynamic';
 import { useMediaQuery } from 'react-responsive';
 import Image from 'next/image';
 import imageSrc from '@/assets/images/875.jpg';
 import NavMenu from './NavMenu';
+import { split } from '@/animations/text';
+import useIsomorphicLayoutEffect from '@/hooks/useIsomorphicLayoutEffect';
 
 const Scene = dynamic(() => import('@/components/Scene'), {
   ssr: false,
 });
-
-gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
   const app = useRef(null);
@@ -29,7 +27,7 @@ const Hero = () => {
 
   const isDesktop = useMediaQuery({ query: '(min-width: 1000px)' });
 
-  useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     const tl = gsap.timeline();
     const init = () => {
       tl.from(app.current, { ease: 'linear', autoAlpha: 0 }).to(app.current, {
@@ -42,7 +40,7 @@ const Hero = () => {
     split();
   }, []);
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     const mm = gsap.matchMedia();
 
     mm.add('(min-width: 1000px)', () => {
@@ -53,7 +51,7 @@ const Hero = () => {
             start: 'top 100%',
             end: 'bottom top',
             scrub: 4,
-            ease: 'power1.out',
+            ease: 'power4.easeInOut',
           },
         });
 
@@ -63,13 +61,7 @@ const Hero = () => {
           { y: -430 },
           '<+=35%',
         );
-        // .fromTo(
-        //   footerText.current,
-        //   { y: -280 },
-        //   { y: -380, duration: 2 },
-        //   '<',
-        // );
-      });
+      }, container);
 
       return () => context.revert();
     });

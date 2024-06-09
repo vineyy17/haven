@@ -8,6 +8,7 @@
   &__container {
     display: flex;
     flex-direction: column;
+    // visibility: hidden;
 
     h2 {
       font-family: var(--font-manrope);
@@ -34,7 +35,6 @@
       margin: 0 auto;
       margin-top: 3rem;
       margin-bottom: 2rem;
-      visibility: hidden;
       width: 70%;
       height: 31rem;
       position: relative;

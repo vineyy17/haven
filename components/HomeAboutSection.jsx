@@ -1,12 +1,14 @@
-import React, { useEffect } from 'react';
+'use client';
+
+import React from 'react';
 import Picture1 from '@/assets/images/agata-create.jpg';
 import Picture2 from '@/assets/images/bruno.jpg';
 import Image from 'next/image';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useLayoutEffect, useRef } from 'react';
+import { gsap } from '@/lib/gsap';
+import { useRef } from 'react';
 import '@/styles/components/HomeAboutSection.scss';
 import Button from './Button';
+import useIsomorphicLayoutEffect from '@/hooks/useIsomorphicLayoutEffect';
 import { split } from '@/animations/text';
 
 const HomeAboutSection = () => {
@@ -14,11 +16,8 @@ const HomeAboutSection = () => {
   const imagesRef = useRef([]);
   const container = useRef(null);
 
-  useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     split();
-  });
-
-  useLayoutEffect(() => {
     const mm = gsap.matchMedia();
 
     mm.add('(min-width: 1000px)', () => {
@@ -28,18 +27,17 @@ const HomeAboutSection = () => {
             trigger: container.current,
             start: 'top bottom',
             end: 'bottom top',
-            scrub: true,
-            ease: 'power1.out',
+            scrub: 4,
           },
         });
 
-        tl.fromTo(imagesRef.current[0], { y: 50 }, { y: -50 }).fromTo(
+        tl.fromTo(imagesRef.current[0], { y: 50 }, { y: -10 }).fromTo(
           imagesRef.current[1],
-          { y: 140 },
-          { y: -140 },
+          { y: 200 },
+          { y: -50 },
           0,
         );
-      });
+      }, container);
 
       return () => context.revert();
     });
