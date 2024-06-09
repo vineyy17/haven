@@ -1,8 +1,11 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect } from 'react';
 import '@/styles/components/SummerCollection.scss';
+import gsap from 'gsap';
 
 const SummerCollection = () => {
-  return <div className="collectionPage">SummerCollection</div>;
+  return <div className="collectionPage"></div>;
 };
 
 export default SummerCollection;

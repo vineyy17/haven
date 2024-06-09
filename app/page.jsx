@@ -1,22 +1,39 @@
 'use client';
 
-import Hero from '@/components/Hero';
+// import Hero from '@/components/Hero';
 import { useEffect } from 'react';
-import { split } from '@/animations/text';
+// import { split } from '@/animations/text';
 import scroll from '@/animations/scroll';
-import SummerCollection from '@/components/SummerCollection';
-import HomeAboutSection from '@/components/HomeAboutSection';
+import dynamic from 'next/dynamic';
+
+const Hero = dynamic(() => import('@/components/Hero'), {
+  ssr: false,
+});
+
+const HomeAboutSection = dynamic(
+  () => import('@/components/HomeAboutSection'),
+  {
+    ssr: false,
+  },
+);
+
+const SpecificationSection = dynamic(
+  () => import('@/components/SpecificationSection'),
+  {
+    ssr: false,
+  },
+);
 
 const HomePage = () => {
   useEffect(() => {
     scroll();
-    split();
   }, []);
 
   return (
     <div>
       <Hero />
       <HomeAboutSection />
+      <SpecificationSection />
     </div>
   );
 };

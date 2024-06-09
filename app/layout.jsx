@@ -8,12 +8,16 @@ const playfair = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-playfair',
   weight: ['400', '500', '600', '700', '800'],
+  display: 'swap',
+  adjustFontFallback: false,
 });
 
 const manrope = Manrope({
   subsets: ['latin'],
   variable: '--font-manrope',
   weight: ['400', '500', '600', '700', '800'],
+  display: 'swap',
+  adjustFontFallback: false,
 });
 
 export const metadata = {

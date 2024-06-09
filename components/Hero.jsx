@@ -39,6 +39,7 @@ const Hero = () => {
     };
 
     init();
+    split();
   }, []);
 
   useLayoutEffect(() => {
