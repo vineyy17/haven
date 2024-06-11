@@ -1,5 +1,6 @@
 'use client';
 import scroll from '@/animations/scroll';
+import SummerCollection from '@/components/SummerCollection';
 import dynamic from 'next/dynamic';
 import { useEffect } from 'react';
 
@@ -31,6 +32,7 @@ const HomePage = () => {
       <Hero />
       <HomeAboutSection />
       <SpecificationSection />
+      <SummerCollection />
     </>
   );
 };
