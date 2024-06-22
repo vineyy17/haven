@@ -1,26 +1,30 @@
 'use client';
 import scroll from '@/animations/scroll';
+import Hero from '@/components/Hero';
+import HomeAboutSection from '@/components/HomeAboutSection';
+import ShowreelPreview from '@/components/ShowreelPreview';
+import SpecificationSection from '@/components/SpecificationSection';
 import SummerCollection from '@/components/SummerCollection';
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 import { useEffect } from 'react';
 
-const Hero = dynamic(() => import('@/components/Hero'), {
-  ssr: false,
-});
+// const Hero = dynamic(() => import('@/components/Hero'), {
+//   ssr: false,
+// });
 
-const HomeAboutSection = dynamic(
-  () => import('@/components/HomeAboutSection'),
-  {
-    ssr: false,
-  },
-);
+// const HomeAboutSection = dynamic(
+//   () => import('@/components/HomeAboutSection'),
+//   {
+//     ssr: false,
+//   },
+// );
 
-const SpecificationSection = dynamic(
-  () => import('@/components/SpecificationSection'),
-  {
-    ssr: false,
-  },
-);
+// const SpecificationSection = dynamic(
+//   () => import('@/components/SpecificationSection'),
+//   {
+//     ssr: false,
+//   },
+// );
 
 const HomePage = () => {
   useEffect(() => {
@@ -33,6 +37,7 @@ const HomePage = () => {
       <HomeAboutSection />
       <SpecificationSection />
       <SummerCollection />
+      <ShowreelPreview />
     </>
   );
 };

@@ -8,20 +8,20 @@ import { gsap } from '@/lib/gsap';
 import { useRef } from 'react';
 import '@/styles/components/HomeAboutSection.scss';
 import Button from './Button';
-import useIsomorphicLayoutEffect from '@/hooks/useIsomorphicLayoutEffect';
 import { split } from '@/animations/text';
+import { useGSAP } from '@gsap/react';
 
 const HomeAboutSection = () => {
   const images = [Picture1, Picture2];
   const imagesRef = useRef([]);
-  const container = useRef(null);
+  const container = useRef();
 
-  useIsomorphicLayoutEffect(() => {
-    split();
-    const mm = gsap.matchMedia();
+  useGSAP(
+    () => {
+      split();
+      const mm = gsap.matchMedia();
 
-    mm.add('(min-width: 1000px)', () => {
-      const context = gsap.context(() => {
+      mm.add('(min-width: 1000px)', () => {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: container.current,
@@ -37,13 +37,12 @@ const HomeAboutSection = () => {
           { y: -50 },
           0,
         );
-      }, container);
+      });
 
-      return () => context.revert();
-    });
-
-    return () => mm.revert();
-  }, []);
+      return () => mm.revert();
+    },
+    { scope: container },
+  );
 
   return (
     <div className="homeAbout" ref={container}>

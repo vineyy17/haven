@@ -12,6 +12,7 @@ import imageSrc from '@/assets/images/875.jpg';
 import NavMenu from './NavMenu';
 import { split } from '@/animations/text';
 import useIsomorphicLayoutEffect from '@/hooks/useIsomorphicLayoutEffect';
+import { useGSAP } from '@gsap/react';
 
 const Scene = dynamic(() => import('@/components/Scene'), {
   ssr: false,
@@ -23,7 +24,7 @@ const Hero = () => {
   const footerText = useRef(null);
   const footer = useRef(null);
   const image = useRef(null);
-  const container = useRef(null);
+  const container = useRef();
 
   const isDesktop = useMediaQuery({ query: '(min-width: 1000px)' });
 
@@ -40,11 +41,11 @@ const Hero = () => {
     split();
   }, []);
 
-  useIsomorphicLayoutEffect(() => {
-    const mm = gsap.matchMedia();
+  useGSAP(
+    () => {
+      const mm = gsap.matchMedia();
 
-    mm.add('(min-width: 1000px)', () => {
-      const context = gsap.context(() => {
+      mm.add('(min-width: 1000px)', () => {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: container.current,
@@ -61,13 +62,12 @@ const Hero = () => {
           { y: -430 },
           '<+=35%',
         );
-      }, container);
+      });
 
-      return () => context.revert();
-    });
-
-    return () => mm.revert();
-  }, []);
+      return () => mm.revert();
+    },
+    { scope: container },
+  );
 
   return (
     <div className="homePage">

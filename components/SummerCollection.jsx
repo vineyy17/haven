@@ -59,7 +59,7 @@ const SummerCollection = () => {
       <div className="shopInfo">
         <div className="shopInfo__top">
           <h2>Featured Products</h2>
-          <Button color="brown">Shop our products</Button>
+          <Button color="brown">See all products</Button>
         </div>
 
         <div>
@@ -105,6 +105,9 @@ const SummerCollection = () => {
             })}
           </Splide>
         </div>
+      </div>
+      <div className="collectionPage__bottom">
+        <Button color="brown">Shop our products</Button>
       </div>
     </div>
   );

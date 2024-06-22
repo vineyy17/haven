@@ -2,7 +2,6 @@ import { Playfair_Display, Manrope } from 'next/font/google';
 import '@/styles/main.scss';
 import 'splitting/dist/splitting.css';
 import 'splitting/dist/splitting-cells.css';
-import NavMenu from '@/components/NavMenu';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],

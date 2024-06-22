@@ -1,48 +1,44 @@
 'use client';
 
-import React, { useRef } from 'react';
-import manImage from '@/assets/images/medium-shot-artisan.jpg';
+import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import '@/styles/components/SpecificationSection.scss';
+import manImage from '@/assets/images/medium-shot-artisan.jpg';
 import { gsap } from '@/lib/gsap';
-import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
-import useIsomorphicLayoutEffect from '@/hooks/useIsomorphicLayoutEffect';
-import { split } from '@/animations/text';
+import '@/styles/components/SpecificationSection.scss';
+import { useGSAP } from '@gsap/react';
 
 const SpecificationSection = () => {
-  const container = useRef(null);
-  const image = useRef(null);
-  const imageReveal = CSSRulePlugin.getRule(
-    '.specPage__container__imageBox::after',
-  );
+  const container = useRef();
+  const imageRef = useRef(null);
 
-  useIsomorphicLayoutEffect(() => {
-    split();
+  useGSAP(
+    () => {
+      const image = imageRef.current;
 
-    const context = gsap.context(() => {
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: container.current,
-          start: 'top 80%',
+          trigger: image,
+          start: 'top 60%',
           end: 'bottom top',
           toggleActions: 'play none none none',
         },
       });
 
-      tl.to(imageReveal, {
-        duration: 3,
-        width: '0%',
+      tl.to(image, {
         ease: 'power4.easeInOut',
-      }).from(image.current, {
         duration: 3,
-        scale: 1.6,
-        ease: 'power4.easeInOut',
-        delay: -3,
-      });
-    }, container);
-
-    return () => context.revert();
-  }, []);
+        clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+      }).to(
+        image,
+        {
+          duration: 3,
+          scale: 1,
+        },
+        '<',
+      );
+    },
+    { scope: container },
+  );
 
   return (
     <div className="specPage">
@@ -54,7 +50,12 @@ const SpecificationSection = () => {
           construct a chair.
         </p>
         <div className="specPage__container__imageBox">
-          <Image ref={image} src={manImage} alt="carpenter image" />
+          <Image
+            ref={imageRef}
+            src={manImage}
+            alt="carpenter image"
+            className="specPage__container__imageBox__image"
+          />
         </div>
         <p data-animation="bounce" className="specPage__container__bottomText">
           Explore our collection &#8599;
