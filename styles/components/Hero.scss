@@ -35,7 +35,7 @@
 
   &__about {
     margin-left: max(40px, 6rem);
-    margin-top: 1rem;
+    margin-top: 2rem;
     // margin-bottom: max(40px, 10rem);
     // width: max(250px, 28.7rem);
 
@@ -58,7 +58,7 @@
 
       @include media('<=tablet') {
         // text-align: center;
-        margin-top: 2rem;
+        margin-top: 1.5rem;
         margin-left: max(30px, 4rem);
       }
 

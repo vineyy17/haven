@@ -1,7 +1,7 @@
 @use '/styles/main.scss' as *;
 
 .homeAbout {
-  min-height: 100vh;
+  min-height: 95vh;
   background-color: #ffffff;
   z-index: 5;
   position: relative;
@@ -34,15 +34,15 @@
         object-fit: cover;
       }
       &:nth-of-type(1) {
-        height: 60vh;
-        width: 50vh;
+        height: toRem(390);
+        width: toRem(330);
         z-index: 1;
       }
       &:nth-of-type(2) {
-        left: 16.5vw;
-        top: 35vh;
-        height: 40vh;
-        width: 30vh;
+        left: 15.5vw;
+        top: 40vh;
+        height: toRem(250);
+        width: toRem(220);
         z-index: 2;
       }
     }

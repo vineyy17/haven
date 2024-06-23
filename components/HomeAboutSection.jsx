@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import Picture1 from '@/assets/images/agata-create.jpg';
-import Picture2 from '@/assets/images/bruno.jpg';
+import Picture1 from '@/assets/images/new-wide.webp';
+import Picture2 from '@/assets/images/ffr.webp';
 import Image from 'next/image';
 import { gsap } from '@/lib/gsap';
 import { useRef } from 'react';
@@ -31,12 +31,11 @@ const HomeAboutSection = () => {
           },
         });
 
-        tl.fromTo(imagesRef.current[0], { y: 50 }, { y: -10 }).fromTo(
-          imagesRef.current[1],
-          { y: 200 },
-          { y: -50 },
-          0,
-        );
+        tl.fromTo(
+          imagesRef.current[0],
+          { y: '9.25vh' },
+          { y: '-2.25vh' },
+        ).fromTo(imagesRef.current[1], { y: '6.25vh' }, { y: '-15.25vh' }, 0);
       });
 
       return () => mm.revert();

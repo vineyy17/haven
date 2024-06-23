@@ -56,10 +56,10 @@ const Hero = () => {
           },
         });
 
-        tl.fromTo(title.current, { y: 0 }, { y: -300 }).fromTo(
+        tl.fromTo(title.current, { y: '0vh' }, { y: '-37.5vh' }).fromTo(
           footer.current,
-          { y: -180 },
-          { y: -430 },
+          { y: '-22.5vh' },
+          { y: '-53.75vh' },
           '<+=35%',
         );
       });
