@@ -1,5 +1,6 @@
 'use client';
 import scroll from '@/animations/scroll';
+import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import HomeAboutSection from '@/components/HomeAboutSection';
 import Newsletter from '@/components/Newsletter';
@@ -40,6 +41,7 @@ const HomePage = () => {
       <SummerCollection />
       <ShowreelPreview />
       <Newsletter />
+      <Footer />
     </>
   );
 };

@@ -18,7 +18,7 @@ const HomeAboutSection = () => {
 
   useGSAP(
     () => {
-      split();
+      // split();
       const mm = gsap.matchMedia();
 
       mm.add('(min-width: 1000px)', () => {

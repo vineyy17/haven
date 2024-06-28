@@ -10,7 +10,6 @@ const Newsletter = () => {
 
   useGSAP(
     () => {
-      split();
       const mm = gsap.matchMedia();
 
       mm.add('(min-width: 1000px)', () => {
