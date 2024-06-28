@@ -88,6 +88,7 @@ const SummerCollection = () => {
                     <Image
                       src={product.image}
                       alt={`${product.name} image`}
+                      className="shopInfo__product__image"
                       // height={500}
                       // width={500}
                     />

@@ -4,9 +4,10 @@
   display: flex;
   align-items: start;
   justify-content: flex-start;
-  min-height: 300vh;
+  min-height: 100vh;
   width: 100vw;
   gap: toRem(30);
+  padding-left: 1rem;
 
   &__imageContainer {
     position: relative;
@@ -33,11 +34,11 @@
     justify-self: flex-end;
 
     width: 21.5rem;
-    margin-bottom: max(1rem, 10px);
+    // margin-bottom: max(1rem, 10px);
     background-color: #ffffff;
 
     &__text {
-      text-align: justify;
+      //   text-align: justify;
       line-height: 153%;
       color: $dark-brown;
 

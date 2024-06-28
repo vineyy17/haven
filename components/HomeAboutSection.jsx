@@ -35,7 +35,7 @@ const HomeAboutSection = () => {
           imagesRef.current[0],
           { y: '9.25vh' },
           { y: '-2.25vh' },
-        ).fromTo(imagesRef.current[1], { y: '6.25vh' }, { y: '-15.25vh' }, 0);
+        ).fromTo(imagesRef.current[1], { y: '10.25vh' }, { y: '-15.25vh' }, 0);
       });
 
       return () => mm.revert();

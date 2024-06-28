@@ -2,6 +2,7 @@
 import scroll from '@/animations/scroll';
 import Hero from '@/components/Hero';
 import HomeAboutSection from '@/components/HomeAboutSection';
+import Newsletter from '@/components/Newsletter';
 import ShowreelPreview from '@/components/ShowreelPreview';
 import SpecificationSection from '@/components/SpecificationSection';
 import SummerCollection from '@/components/SummerCollection';
@@ -38,6 +39,7 @@ const HomePage = () => {
       <SpecificationSection />
       <SummerCollection />
       <ShowreelPreview />
+      <Newsletter />
     </>
   );
 };

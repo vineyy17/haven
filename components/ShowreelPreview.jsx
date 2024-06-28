@@ -1,13 +1,11 @@
 import React from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { gsap } from '@/lib/gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '@/styles/components/ShowreelPreview.scss';
 import Image from 'next/image';
 import lbImage from '@/assets/images/arrangement-white.jpg';
 import Button from './Button';
 import { useGSAP } from '@gsap/react';
-
-gsap.registerPlugin(ScrollTrigger);
 
 const ShowreelPreview = () => {
   useGSAP(() => {
@@ -19,7 +17,6 @@ const ShowreelPreview = () => {
         scrollTrigger: {
           trigger: container,
           scrub: true,
-          markers: true,
           invalidateOnRefresh: true,
         },
       });
@@ -32,7 +29,6 @@ const ShowreelPreview = () => {
         start: 'top-=7% top',
         end: 'bottom -83.5%',
         scrub: true,
-        markers: true,
       },
     });
   }, []);
