@@ -2,7 +2,7 @@
 
 import '@/styles/components/Hero.scss';
 import '@/styles/pages/Homepage.scss';
-import { useEffect, useLayoutEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { gsap } from '@/lib/gsap';
 import Button from './Button';
 import dynamic from 'next/dynamic';

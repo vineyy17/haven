@@ -6,8 +6,11 @@ import Image from 'next/image';
 import lbImage from '@/assets/images/arrangement-white.jpg';
 import Button from './Button';
 import { useGSAP } from '@gsap/react';
+import { useMediaQuery } from 'react-responsive';
 
 const ShowreelPreview = () => {
+  const isTablet = useMediaQuery({ query: '(max-width: 865px)' });
+
   useGSAP(() => {
     gsap.utils.toArray('.sReelP__imageContainer').forEach((container) => {
       let image = container.querySelector('img');
@@ -26,9 +29,8 @@ const ShowreelPreview = () => {
       scrollTrigger: {
         trigger: '.sReelP__textContainer',
         pin: true,
-        start: 'top-=7% top',
-        end: 'bottom -83.5%',
-        scrub: true,
+        start: 'top-=2% top',
+        end: 'bottom top',
       },
     });
   }, []);

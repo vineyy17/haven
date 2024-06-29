@@ -5,6 +5,7 @@ import '@/styles/components/SummerCollection.scss';
 import Button from './Button';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+import { useMediaQuery } from 'react-responsive';
 import '@splidejs/react-splide/css';
 import Image from 'next/image';
 import image1 from '@/assets/images/image1.png';
@@ -54,6 +55,8 @@ const products = [
 ];
 
 const SummerCollection = () => {
+  const isTablet = useMediaQuery({ query: '(max-width: 865px)' });
+
   return (
     <div className="collectionPage">
       <div className="shopInfo">
@@ -67,8 +70,8 @@ const SummerCollection = () => {
             extensions={{ AutoScroll }}
             options={{
               type: 'loop',
-              gap: '24px',
-              perPage: 4,
+              gap: '1.5rem',
+              perPage: isTablet ? 2 : 4,
               // autoHeight: true,
               arrows: false,
               pagination: false,

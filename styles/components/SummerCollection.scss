@@ -4,6 +4,10 @@
   background-color: #ffffff;
   height: 100vh;
 
+  @include media('<=tablet') {
+    height: 85vh;
+  }
+
   .shopInfo {
     &__top {
       display: flex;
@@ -11,6 +15,10 @@
       align-items: flex-start;
       padding: 4rem 1rem;
       padding-bottom: 2rem;
+
+      @include media('<=tablet') {
+        padding: 3rem 1rem;
+      }
 
       h2 {
         font-family: var(--font-manrope);
@@ -22,6 +30,10 @@
         text-transform: uppercase;
         color: $dark-brown;
         margin-bottom: 1rem;
+
+        @include media('<=tablet') {
+          font-size: 2rem;
+        }
       }
     }
 
@@ -34,6 +46,11 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      cursor: grab;
+
+      @include media('<=tablet') {
+        width: 50vw;
+      }
 
       img {
         height: toRem(199);
