@@ -56,13 +56,16 @@ const products = [
 
 const SummerCollection = () => {
   const isTablet = useMediaQuery({ query: '(max-width: 865px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 500px)' });
 
   return (
     <div className="collectionPage">
       <div className="shopInfo">
         <div className="shopInfo__top">
           <h2>Featured Products</h2>
-          <Button color="brown">See all products</Button>
+          <div className="shopInfo__top__right">
+            <Button color="brown">See all products</Button>
+          </div>
         </div>
 
         <div>

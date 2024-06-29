@@ -9,6 +9,12 @@
     padding: 3rem;
   }
 
+  @include media('<=phone-tab') {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-height: fit-content;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -27,6 +33,11 @@
       @include media('<=tablet') {
         font-size: 2rem;
       }
+
+      @include media('<=phone-tab') {
+        font-size: 1.5rem;
+        text-align: justify;
+      }
     }
 
     &__paragraph {
@@ -36,6 +47,14 @@
       font-size: 1rem;
       width: toRem(602);
       margin: 0 auto;
+
+      @include media('<=phone-tab') {
+        font-size: 0.8rem;
+        width: 100%;
+        text-align: justify;
+        // text-align: left;
+        margin: 0;
+      }
     }
 
     &__imageBox {
@@ -74,7 +93,11 @@
       letter-spacing: -0.06rem;
       cursor: pointer;
 
-      // text-decoration: underline;
+      @include media('<=phone-tab') {
+        width: 100%;
+        text-align: center;
+        font-size: 1.25rem;
+      }
     }
   }
 }

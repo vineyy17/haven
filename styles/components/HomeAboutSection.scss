@@ -13,6 +13,12 @@
     padding: 3rem;
   }
 
+  @include media('<=phone-tab') {
+    min-height: 30vh;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   &__wrapper {
     display: flex;
     align-items: flex-start;
@@ -70,6 +76,10 @@
         @include media('<=tablet') {
           font-size: 2rem;
         }
+
+        @include media('<=phone-tab') {
+          font-size: 1.5rem;
+        }
       }
 
       &__paragraph {
@@ -82,10 +92,19 @@
           color: $dark-brown;
 
           font-size: 1rem;
+
+          @include media('<=phone-tab') {
+            font-size: 0.8rem;
+            width: 80%;
+          }
         }
       }
 
       @include media('<=tablet') {
+        width: 100%;
+      }
+
+      @include media('<=phone-tab') {
         width: 100%;
       }
     }

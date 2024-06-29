@@ -6,33 +6,36 @@ import Image from 'next/image';
 import lbImage from '@/assets/images/arrangement-white.jpg';
 import Button from './Button';
 import { useGSAP } from '@gsap/react';
-import { useMediaQuery } from 'react-responsive';
 
 const ShowreelPreview = () => {
-  const isTablet = useMediaQuery({ query: '(max-width: 865px)' });
-
   useGSAP(() => {
-    gsap.utils.toArray('.sReelP__imageContainer').forEach((container) => {
-      let image = container.querySelector('img');
-      gsap.to(image, {
-        y: () => image.offsetHeight - container.offsetHeight,
-        ease: 'none',
+    const mm = gsap.matchMedia();
+
+    mm.add('(min-width: 500px)', () => {
+      gsap.utils.toArray('.sReelP__imageContainer').forEach((container) => {
+        let image = container.querySelector('img');
+        gsap.to(image, {
+          y: () => image.offsetHeight - container.offsetHeight,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: container,
+            scrub: true,
+            invalidateOnRefresh: true,
+          },
+        });
+      });
+
+      gsap.to('.sReelP__textContainer', {
         scrollTrigger: {
-          trigger: container,
-          scrub: true,
-          invalidateOnRefresh: true,
+          trigger: '.sReelP__textContainer',
+          pin: true,
+          start: 'top-=2% top',
+          end: 'bottom top',
         },
       });
     });
 
-    gsap.to('.sReelP__textContainer', {
-      scrollTrigger: {
-        trigger: '.sReelP__textContainer',
-        pin: true,
-        start: 'top-=2% top',
-        end: 'bottom top',
-      },
-    });
+    return () => mm.revert();
   }, []);
 
   return (

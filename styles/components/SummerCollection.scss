@@ -16,6 +16,11 @@
         padding: 3rem 1rem;
       }
 
+      @include media('<=phone-tab') {
+        padding: 1rem;
+        padding-top: 3rem;
+      }
+
       h2 {
         font-family: var(--font-manrope);
         font-size: 2.4rem;
@@ -29,6 +34,17 @@
 
         @include media('<=tablet') {
           font-size: 2rem;
+        }
+
+        @include media('<=phone-tab') {
+          font-size: 1.5rem;
+          margin-bottom: 0;
+        }
+      }
+
+      &__right {
+        @include media('<=phone-tab') {
+          display: none;
         }
       }
     }
@@ -47,10 +63,18 @@
       @include media('<=tablet') {
         width: 50vw;
       }
+      @include media('<=phone-tab') {
+        width: 50vw;
+        height: toRem(300);
+      }
 
       img {
         height: toRem(199);
         width: auto;
+
+        @include media('<=phone-tab') {
+          height: toRem(149);
+        }
       }
 
       &__details {
@@ -58,6 +82,11 @@
         bottom: 2%;
         left: 2%;
         width: 100%;
+
+        @include media('<=phone-tab') {
+          bottom: 2%;
+          left: 4%;
+        }
 
         &__name {
           text-align: left;
@@ -67,6 +96,10 @@
           width: toRem(602);
           margin: 0 auto;
           text-transform: uppercase;
+
+          @include media('<=phone-tab') {
+            font-size: 0.8rem;
+          }
         }
 
         &__price {
@@ -76,6 +109,10 @@
           font-size: 1.5rem;
           width: toRem(602);
           margin: 0 auto;
+
+          @include media('<=phone-tab') {
+            font-size: 1.1rem;
+          }
         }
       }
     }
@@ -86,6 +123,11 @@
     justify-content: center;
     align-items: center;
     margin-top: toRem(50);
-    padding-bottom: 4rem !important;
+    padding-bottom: 4rem;
+
+    @include media('<=phone-tab') {
+      margin-top: toRem(25);
+      padding-bottom: 3rem;
+    }
   }
 }

@@ -16,6 +16,11 @@
     padding-right: 1rem;
   }
 
+  @include media('<=phone-tab') {
+    flex-direction: column;
+    gap: toRem(10);
+  }
+
   &__imageContainer {
     position: relative;
     overflow: hidden;
@@ -26,6 +31,11 @@
     @include media('<=tablet') {
       height: 40rem;
       width: 65vw;
+    }
+
+    @include media('<=phone-tab') {
+      height: 30rem;
+      width: 100%;
     }
 
     img {
@@ -41,6 +51,12 @@
 
       @include media('<=tablet') {
         height: 170%;
+      }
+
+      @include media('<=phone-tab') {
+        position: relative;
+        height: 100%;
+        width: 100%;
       }
     }
   }
@@ -59,16 +75,27 @@
       height: 18.2rem;
     }
 
+    @include media('<=phone-tab') {
+      width: 70%;
+      height: fit-content;
+    }
+
     &__text {
-      //   text-align: justify;
       line-height: 153%;
       color: $dark-brown;
-
       font-size: 1rem;
+
+      @include media('<=phone-tab') {
+        font-size: 0.8rem;
+      }
     }
 
     &__button {
       margin-top: 2.5rem;
+      @include media('<=phone-tab') {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+      }
     }
   }
 }
