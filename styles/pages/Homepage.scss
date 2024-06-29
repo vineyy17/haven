@@ -6,12 +6,18 @@
   // max-height: 215vh;
   //   @include flex_col(2rem);
   @extend %hero;
+  background-image: url('../../assets/images/Hero\ Image.png');
+  background-blend-mode: darken;
+
+  @include media('<=tablet') {
+    @include flex_col(1.5rem);
+    height: 150vh;
+  }
+
   @include media('<=phone-tab') {
     @include flex_col(1.5rem);
     height: fit-content;
   }
-  background-image: url('../../assets/images/Hero\ Image.png');
-  background-blend-mode: darken;
 }
 
 .homePage::after {

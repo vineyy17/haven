@@ -110,7 +110,7 @@ const Hero = () => {
                   <Scene />
                 ) : (
                   <Image
-                    height={300}
+                    height={280}
                     width={230}
                     src={imageSrc}
                     alt="Model"

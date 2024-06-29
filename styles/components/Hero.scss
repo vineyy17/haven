@@ -59,7 +59,7 @@
       @include media('<=tablet') {
         // text-align: center;
         margin-top: 1.5rem;
-        margin-left: max(30px, 4rem);
+        margin-left: max(30px, 3rem);
       }
 
       @include media('<=phone-tab') {
@@ -71,7 +71,7 @@
 
     &__button {
       @include media('<=tablet') {
-        margin-left: max(30px, 4rem);
+        margin-left: max(30px, 3rem);
       }
 
       @include media('<=phone-tab') {
@@ -91,7 +91,7 @@
       // padding-bottom: 0;
 
       @include media('<=tablet') {
-        transform: translateX(0px);
+        transform: translateX(-6%);
       }
 
       @include media('<=phone-tab') {
@@ -150,13 +150,9 @@
       font-weight: 400;
       // margin-top: 8rem;
 
-      @media screen and (max-width: 1000px) {
-        margin-top: 6.6rem;
-      }
-
       @include media('<=tablet') {
         font-size: 2.3rem;
-        margin-top: 3.3rem;
+        margin-top: 3.8rem;
       }
 
       @include media('<=phone-tab') {

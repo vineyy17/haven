@@ -8,6 +8,11 @@
   padding: 6rem;
   padding-top: 4rem;
 
+  @include media('<=tablet') {
+    min-height: 47vh;
+    padding: 3rem;
+  }
+
   &__wrapper {
     display: flex;
     align-items: flex-start;
@@ -61,6 +66,10 @@
         text-transform: uppercase;
         color: $dark-brown;
         margin-bottom: 1rem;
+
+        @include media('<=tablet') {
+          font-size: 2rem;
+        }
       }
 
       &__paragraph {

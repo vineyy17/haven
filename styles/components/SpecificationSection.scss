@@ -5,6 +5,10 @@
   min-height: 100vh;
   padding: 4rem;
 
+  @include media('<=tablet') {
+    padding: 3rem;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -19,6 +23,10 @@
       text-transform: uppercase;
       color: $dark-brown;
       margin-bottom: 1rem;
+
+      @include media('<=tablet') {
+        font-size: 2rem;
+      }
     }
 
     &__paragraph {
@@ -38,7 +46,10 @@
       height: 31rem;
       position: relative;
       overflow: hidden;
-      // clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+
+      @include media('<=tablet') {
+        width: 100%;
+      }
 
       img {
         height: 100%;
@@ -65,9 +76,5 @@
 
       // text-decoration: underline;
     }
-
-    // &__bottomText:hover {
-    //   text-decoration: underline;
-    // }
   }
 }
