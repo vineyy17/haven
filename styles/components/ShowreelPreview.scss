@@ -8,9 +8,10 @@
   width: 100vw;
   gap: toRem(30);
   padding-left: 1rem;
+  position: relative;
 
   @include media('<=tablet') {
-    min-height: 80vh;
+    min-height: 38rem;
     gap: toRem(16);
     padding-right: 1rem;
   }
@@ -20,10 +21,10 @@
     overflow: hidden;
     background-color: $col-cream;
     width: 60vw;
-    height: 150vh;
+    height: 75rem;
 
     @include media('<=tablet') {
-      height: 80vh;
+      height: 40rem;
       width: 65vw;
     }
 
@@ -47,16 +48,15 @@
   &__textContainer {
     // width: 40vw;
     justify-self: flex-end;
-
     width: 21.5rem;
     // margin-bottom: max(1rem, 10px);
     background-color: #ffffff;
-    height: 113.9vh;
+    height: 57.5rem;
     z-index: -1;
 
     @include media('<=tablet') {
       width: 12rem;
-      height: 38.5vh;
+      height: 18.2rem;
     }
 
     &__text {

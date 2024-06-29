@@ -13,9 +13,7 @@ const Footer = () => {
           <p>Linkedin</p>
           <p>Email</p>
         </div>
-        <h2 className="footer__inner__mid" data-animation="blurIn">
-          Haven
-        </h2>
+        <h2 className="footer__inner__mid">Haven</h2>
         <div className="footer__inner__right">
           <p>Shop</p>
           <p>About</p>

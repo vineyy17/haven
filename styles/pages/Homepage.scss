@@ -1,8 +1,8 @@
 @use '/styles/main.scss' as *;
 
 .homePage {
-  // min-height: 120vh;
-  height: 170vh;
+  min-height: 100vh;
+  height: toRem(1350);
   // max-height: 215vh;
   //   @include flex_col(2rem);
   @extend %hero;
@@ -11,7 +11,7 @@
 
   @include media('<=tablet') {
     @include flex_col(1.5rem);
-    height: 150vh;
+    height: 75rem;
   }
 
   @include media('<=phone-tab') {
