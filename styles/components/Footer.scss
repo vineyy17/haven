@@ -2,7 +2,7 @@
 
 .footer {
   position: relative;
-  height: 48rem;
+  height: 38rem;
   clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
   background-color: #f5f5f5;
   background-image: url('../../assets/images/empty-modern-room-with-furniture.jpg');
@@ -11,17 +11,23 @@
   background-size: cover;
   background-attachment: fixed;
   background-position-x: 50%;
-  background-position-y: top;
+  background-position-y: center;
   z-index: 1;
   background-attachment: scroll;
 
   @include media('<tablet') {
     background-attachment: scroll;
+    height: 25rem;
+    background-position-y: top;
+  }
+
+  @include media('<phone-tab') {
+    background-attachment: scroll;
     height: 20rem;
   }
 
   &__inner {
-    height: 40rem;
+    height: 38rem;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -67,14 +73,14 @@
 
     &__mid {
       font-family: var(--font-playfair);
-      font-size: 8rem;
+      font-size: 10rem;
       text-align: center;
       font-weight: 900;
       line-height: 1.2;
       letter-spacing: -0.02em;
       text-transform: uppercase;
       color: $dark-brown;
-      padding-top: toRem(130);
+      padding-top: toRem(110);
       padding-right: 2rem;
 
       @include media('<=tablet') {
