@@ -54,6 +54,14 @@ img {
   -webkit-user-drag: none;
   user-select: none;
 }
+input,
+textarea,
+select {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
 ::-webkit-scrollbar {
   display: none;
 }

@@ -9,7 +9,6 @@
   overflow-x: hidden;
 
   @include media('<=phone-tab') {
-    //   margin-top: max(5rem, 50px);
     left: -0.1rem;
   }
 
@@ -36,8 +35,6 @@
   &__about {
     margin-left: max(40px, 6rem);
     margin-top: 2rem;
-    // margin-bottom: max(40px, 10rem);
-    // width: max(250px, 28.7rem);
 
     @include media('<=tablet') {
       margin-left: 0;
@@ -52,12 +49,10 @@
       font-weight: 400;
       text-transform: uppercase;
       letter-spacing: -0.02rem;
-      //   font-size: 0.9rem;
 
       font-size: max(14px, 0.9rem);
 
       @include media('<=tablet') {
-        // text-align: center;
         margin-top: 1.5rem;
         margin-left: max(30px, 3rem);
       }
@@ -85,10 +80,7 @@
       text-align: right;
       line-height: 1.2;
       margin: 0 auto;
-      transform: translateX(-10%);
-
-      // margin-bottom: 0;
-      // padding-bottom: 0;
+      transform: translateX(-8%);
 
       @include media('<=tablet') {
         transform: translateX(-6%);
@@ -99,13 +91,16 @@
       }
 
       h1 {
-        font-size: 3.5rem;
+        font-size: 3.3rem;
         letter-spacing: -0.05em;
         font-family: var(--font-manrope);
         color: $col-milch;
         font-weight: 400;
         margin-top: 8rem;
 
+        @include media('<=desktop') {
+          margin-top: 3.3rem;
+        }
         @include media('<=tablet') {
           font-size: 2.3rem;
           margin-top: 3.3rem;
@@ -126,7 +121,7 @@
 
     &__model {
       height: 28rem;
-      // margin-right: max(40px, 6rem);
+
       @include media('<=tablet') {
         height: 23rem;
       }
@@ -143,12 +138,15 @@
     }
 
     &__footerText {
-      font-size: 3.5rem;
+      font-size: 3.3rem;
       letter-spacing: -0.05em;
       font-family: var(--font-manrope);
       color: $col-milch;
       font-weight: 400;
-      // margin-top: 8rem;
+
+      @include media('<=desktop') {
+        margin-top: 3.3rem;
+      }
 
       @include media('<=tablet') {
         font-size: 2.3rem;

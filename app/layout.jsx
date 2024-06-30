@@ -2,6 +2,7 @@ import { Playfair_Display, Manrope } from 'next/font/google';
 import '@/styles/main.scss';
 import 'splitting/dist/splitting.css';
 import 'splitting/dist/splitting-cells.css';
+import Head from 'next/head';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -28,6 +29,9 @@ export const metadata = {
 const MainLayout = ({ children }) => {
   return (
     <html lang="en" className={`${playfair.variable} ${manrope.variable}`}>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
       <body>
         {/* <NavMenu /> */}
         <main>{children}</main>

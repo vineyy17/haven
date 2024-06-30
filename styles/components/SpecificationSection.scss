@@ -2,7 +2,7 @@
 
 .specPage {
   background-color: #f5f5f5;
-  min-height: 100vh;
+  min-height: 45rem;
   padding: 4rem;
 
   @include media('<=tablet') {
@@ -68,6 +68,12 @@
 
       @include media('<=tablet') {
         width: 100%;
+      }
+
+      @include media('<=phone-tab') {
+        height: 25rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
       }
 
       img {

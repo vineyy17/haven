@@ -1,7 +1,7 @@
 @use '/styles/main.scss' as *;
 
 .homeAbout {
-  min-height: 90vh;
+  min-height: 40rem;
   background-color: #ffffff;
   z-index: 5;
   position: relative;
@@ -50,11 +50,16 @@
         z-index: 1;
       }
       &:nth-of-type(2) {
-        left: 15.5vw;
-        top: 40vh;
+        left: 14rem;
+        top: 19rem;
         height: toRem(250);
         width: toRem(220);
         z-index: 2;
+
+        @include media('<=desktop') {
+          left: 14rem;
+          top: 17rem;
+        }
       }
     }
 

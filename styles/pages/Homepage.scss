@@ -2,12 +2,15 @@
 
 .homePage {
   min-height: 100vh;
-  height: toRem(1350);
-  // max-height: 215vh;
-  //   @include flex_col(2rem);
+  height: toRem(1315);
   @extend %hero;
   background-image: url('../../assets/images/Hero\ Image.png');
   background-blend-mode: darken;
+
+  @include media('<=desktop') {
+    @include flex_col(1.5rem);
+    height: 105rem;
+  }
 
   @include media('<=tablet') {
     @include flex_col(1.5rem);
