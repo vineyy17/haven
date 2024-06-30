@@ -3,6 +3,7 @@ import '@/styles/main.scss';
 import 'splitting/dist/splitting.css';
 import 'splitting/dist/splitting-cells.css';
 import Head from 'next/head';
+import Script from 'next/script';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -33,8 +34,15 @@ const MainLayout = ({ children }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <body>
-        {/* <NavMenu /> */}
         <main>{children}</main>
+        <Script
+          src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/blotter.min.js"
+          strategy="beforeInteractive"
+        />
+        <Script
+          src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/liquidDistortMaterial.min.js"
+          strategy="beforeInteractive"
+        />
       </body>
     </html>
   );

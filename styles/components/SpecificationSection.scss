@@ -18,6 +18,7 @@
   &__container {
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     h2 {
       font-family: var(--font-manrope);
@@ -59,7 +60,7 @@
 
     &__imageBox {
       margin: 0 auto;
-      margin-top: 3rem;
+      margin-top: 2rem;
       margin-bottom: 2rem;
       width: 70%;
       height: 31rem;
@@ -85,26 +86,6 @@
         position: absolute;
         object-fit: cover;
         clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-      }
-    }
-
-    &__bottomText {
-      text-align: center;
-      line-height: 153%;
-      color: $dark-brown;
-      font-size: 1.5rem;
-      width: toRem(602);
-      margin: 0 auto;
-      font-family: var(--font-manrope);
-      text-transform: uppercase;
-      font-weight: 500;
-      letter-spacing: -0.06rem;
-      cursor: pointer;
-
-      @include media('<=phone-tab') {
-        width: 100%;
-        text-align: center;
-        font-size: 1.25rem;
       }
     }
   }

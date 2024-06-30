@@ -102,7 +102,7 @@
 
   p {
     color: #000;
-    font-weight: 400;
+    font-weight: 500;
     text-transform: uppercase;
   }
 }
@@ -140,12 +140,9 @@
   }
 
   .menu-info-col-holder {
-    a,
-    p {
-      color: #000;
-      font-weight: 400;
-      text-transform: uppercase;
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
   }
 
   .menu-info-col {
@@ -168,10 +165,6 @@
   .menu-link-item-holder a {
     font-size: toRem(60);
   }
-
-  //   .menu-preview p {
-  //     position: absolute;
-  //   }
 }
 
 @media (max-width: 500px) {

@@ -125,18 +125,10 @@ const Header = (logoColor, linkColor) => {
               <div className="menu_drop_wrap-links">
                 <div className="menu_drop_wrap-links_socials">
                   <div class="menu_drop_wrap-in">
-                    <Link data-animation="h" href="/home">
-                      Instagram
-                    </Link>
-                    <Link data-animation="h" href="/home">
-                      Twitter
-                    </Link>
-                    <Link data-animation="h" href="/home">
-                      Linkedin
-                    </Link>
-                    <Link data-animation="h" href="/home">
-                      Github
-                    </Link>
+                    <AnimatedLink data-animation="h">Instagram</AnimatedLink>
+                    <AnimatedLink data-animation="h">Twitter</AnimatedLink>
+                    <AnimatedLink data-animation="h">Linkedin</AnimatedLink>
+                    <AnimatedLink data-animation="h">Github</AnimatedLink>
                   </div>
                 </div>
               </div>

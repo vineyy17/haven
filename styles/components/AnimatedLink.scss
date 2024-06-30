@@ -18,15 +18,11 @@
     display: inline-block;
   }
   &_txt {
-    color: $col-cream;
-    font-family: var(--font-playfair), serif;
-    font-weight: 600;
-
-    font-size: toRem(22);
+    color: #000000;
     text-transform: uppercase;
-    @include media('<=tablet') {
-      display: none;
-    }
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
 
     &--cream {
       color: $col-cream;
@@ -36,33 +32,75 @@
       color: $col-milch;
     }
 
-    &_hidden {
-      text-transform: uppercase;
-      font-family: var(--font-manrope), serif;
-      font-size: toRem(17);
-      @include media('<=tablet') {
-        display: none;
-      }
+    &--block {
+      color: $col-milch;
     }
 
     &_mobilenav {
-      text-transform: uppercase;
-      font-family: var(--font-playfair), serif;
+      font-family: var(--font-manrope), serif;
       font-size: toRem(22);
-      color: #a37642;
-      display: block;
+      color: #000000;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: all 0.3s ease-in;
+    }
+
+    &_mobilenav::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: toRem(1.5);
+      bottom: 0.2rem;
+      left: 0;
+      background-color: #000000;
+      transition: width 0.5s ease-in-out;
+    }
+
+    &_mobilenav:hover::after {
+      width: 100%;
+    }
+
+    &_heading {
+      text-align: center;
+      line-height: 153%;
+      color: $dark-brown;
+      font-size: 1.5rem;
+      font-family: var(--font-manrope);
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: -0.06rem;
+      cursor: pointer;
+
+      @include media('<=phone-tab') {
+        text-align: center;
+        font-size: 1.25rem;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: toRem(1.5);
+        bottom: 0.2rem;
+        left: 0;
+        background-color: $dark-brown;
+        transition: width 0.5s ease-in-out;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
     }
   }
-  svg {
-    fill: $col-cream;
+
+  .arrowSvg {
+    fill: #000000;
     position: relative;
     top: 0.1rem;
     width: 1.2rem;
-  }
 
-  .svg_hidden {
-    @include media('<=tablet') {
-      display: none;
+    &--heading {
+      fill: $dark-brown;
     }
   }
 }

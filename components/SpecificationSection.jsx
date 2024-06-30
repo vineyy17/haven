@@ -6,6 +6,7 @@ import manImage from '@/assets/images/medium-shot-artisan.jpg';
 import { gsap } from '@/lib/gsap';
 import '@/styles/components/SpecificationSection.scss';
 import { useGSAP } from '@gsap/react';
+import AnimatedLink from './AnimatedLink';
 
 const SpecificationSection = () => {
   const container = useRef();
@@ -57,8 +58,8 @@ const SpecificationSection = () => {
             className="specPage__container__imageBox__image"
           />
         </div>
-        <p data-animation="bounce" className="specPage__container__bottomText">
-          Explore our collection &#8599;
+        <p className="specPage__container__bottomText">
+          <AnimatedLink type="heading">Explore our collection</AnimatedLink>
         </p>
       </div>
     </div>

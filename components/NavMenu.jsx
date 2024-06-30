@@ -6,6 +6,7 @@ import '@/styles/components/NavMenu.scss';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { usePathname } from 'next/navigation';
+import AnimatedLink from './AnimatedLink';
 
 const menuLinks = [
   { path: '/', label: 'Home' },
@@ -13,13 +14,6 @@ const menuLinks = [
   { path: '/shop', label: 'Shop' },
   { path: '/contact', label: 'Contact' },
   { path: '/showreel', label: 'Showreel' },
-];
-
-const socialLinks = [
-  { path: '#', label: 'X ' },
-  { path: '#', label: 'Github' },
-  { path: '#', label: 'Linkedin' },
-  { path: '#', label: 'Email' },
 ];
 
 const NavMenu = () => {
@@ -126,13 +120,14 @@ const NavMenu = () => {
             </div>
             <div className="menu-info">
               <div className="menu-info-col">
-                {socialLinks.map((link, index) => (
-                  <div key={index} className="menu-info-col-item">
-                    <div className="menu-info-col-holder">
-                      <a href={link.path}>{link.label} &#8599;</a>
-                    </div>
+                <div className="menu-info-col-item">
+                  <div className="menu-info-col-holder">
+                    <AnimatedLink>Twitter</AnimatedLink>
+                    <AnimatedLink>Linkedin</AnimatedLink>
+                    <AnimatedLink>Email</AnimatedLink>
+                    <AnimatedLink>Github</AnimatedLink>
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           </div>
@@ -141,7 +136,7 @@ const NavMenu = () => {
             <div className="menu-preview-box">
               <div className="menu-preview-box-item">
                 <div className="menu-preview-box-holder">
-                  <p>EXPLORE</p>
+                  <AnimatedLink>Explore</AnimatedLink>
                 </div>
               </div>
             </div>
