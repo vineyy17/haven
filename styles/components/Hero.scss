@@ -34,7 +34,7 @@
 
   &__about {
     margin-left: max(40px, 6rem);
-    margin-top: 2rem;
+    // margin-top: 2rem;
 
     @include media('<=tablet') {
       margin-left: 0;
@@ -53,8 +53,8 @@
       font-size: max(14px, 0.9rem);
 
       @include media('<=tablet') {
-        margin-top: 1.5rem;
-        margin-left: max(30px, 3rem);
+        margin-top: 0;
+        margin-left: max(30px, 2rem);
       }
 
       @include media('<=phone-tab') {
@@ -103,7 +103,7 @@
         }
         @include media('<=tablet') {
           font-size: 2.3rem;
-          margin-top: 3.3rem;
+          margin-top: 3.5rem;
         }
 
         @include media('<=tablet') {
@@ -131,6 +131,10 @@
         margin: 0 auto;
         margin-top: 2.8rem;
 
+        @include media('<=tablet') {
+          margin-top: 2rem;
+        }
+
         @include media('<=phone-tab') {
           margin-top: 2rem;
         }
@@ -150,13 +154,13 @@
 
       @include media('<=tablet') {
         font-size: 2.3rem;
-        margin-top: 3.3rem;
+        margin-top: 1.9rem;
       }
 
       @include media('<=phone-tab') {
         font-size: 2rem;
-        margin-top: 0.5rem;
-        margin-bottom: 2.8rem;
+        margin-top: 0rem;
+        margin-bottom: 2.5rem;
         letter-spacing: -0.04em;
       }
     }

@@ -10,6 +10,10 @@ span.word_wrap {
   overflow-y: hidden;
   position: relative;
 }
+[data-animation='custom'] span.word {
+  overflow-y: hidden;
+  position: relative;
+}
 [data-animation='opacIn'] span.word {
   position: relative;
   overflow: auto !important;

@@ -11,6 +11,10 @@
   height: 100vh;
   background: $primary-text;
   padding: 5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @include media('<=phone-tab') {
     padding: 1rem 1rem;
     @include flex_col(0);
@@ -22,7 +26,11 @@
     height: 100%;
     background: #948979;
     @include media('<=tablet') {
-      height: 80%;
+      height: 70%;
+      // background: none;
+    }
+    @include media('<=phone-tab') {
+      height: 50%;
       // background: none;
     }
     margin: 0 auto;

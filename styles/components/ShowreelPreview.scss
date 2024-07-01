@@ -8,6 +8,7 @@
   width: 100vw;
   gap: toRem(30);
   padding-left: 1rem;
+  padding-right: 1rem;
   position: relative;
 
   @include media('<=tablet') {
@@ -71,8 +72,8 @@
     z-index: 1;
 
     @include media('<=tablet') {
-      width: 12rem;
-      height: 18.2rem;
+      width: 14rem;
+      height: 16.1rem;
     }
 
     @include media('<=phone-tab') {
