@@ -9,6 +9,8 @@
   justify-content: center;
   align-items: center;
   padding-top: 2rem;
+  position: relative;
+  z-index: 5;
 
   @include media('<=tablet') {
     min-height: 29rem;

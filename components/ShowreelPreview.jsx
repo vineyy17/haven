@@ -1,9 +1,9 @@
+'use client';
+
 import React from 'react';
 import { gsap } from '@/lib/gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '@/styles/components/ShowreelPreview.scss';
 import Image from 'next/image';
-import lbImage from '@/assets/images/arrangement-white.jpg';
 import Button from './Button';
 import { useGSAP } from '@gsap/react';
 
@@ -42,11 +42,14 @@ const ShowreelPreview = () => {
     <div className="sReelP">
       <div className="sReelP__imageContainer">
         <Image
-          src={lbImage}
+          src="https://res.cloudinary.com/dqfzpmj9n/image/upload/v1719806207/arrangement-white_jrdnxr.jpg"
           alt="Sample"
           className="sReelP__imageContainer__image"
           //   width={1000}
           //   height={5000}
+          width={0}
+          height={0}
+          sizes="100vw"
         />
       </div>
       <div className="sReelP__textContainer">

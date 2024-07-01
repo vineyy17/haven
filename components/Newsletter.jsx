@@ -1,8 +1,9 @@
+'use client';
+
 import React, { useRef } from 'react';
 import '@/styles/components/Newsletter.scss';
 import { useGSAP } from '@gsap/react';
 import { gsap } from '@/lib/gsap';
-import { split } from '@/animations/text';
 
 const Newsletter = () => {
   const boxRef = useRef();

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import '@/styles/components/NavMenu.scss';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -18,13 +19,17 @@ const menuLinks = [
 
 const NavMenu = () => {
   const currentPath = usePathname();
-
+  const router = useRouter();
   const container = useRef();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [navigatePath, setNavigatePath] = useState(null);
 
   const tl = useRef();
 
-  const toggleMenu = () => {
+  const toggleMenu = (path = null) => {
+    if (path) {
+      setNavigatePath(path);
+    }
     setIsMenuOpen(!isMenuOpen);
   };
 
@@ -68,6 +73,17 @@ const NavMenu = () => {
     }
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    if (!isMenuOpen && navigatePath) {
+      const timeoutId = setTimeout(() => {
+        router.push(navigatePath);
+        setNavigatePath(null);
+      }, 2000);
+
+      return () => clearTimeout(timeoutId);
+    }
+  }, [isMenuOpen, navigatePath, router]);
+
   return (
     <div className="menu-parent">
       <div className="menu-container" ref={container}>
@@ -75,7 +91,7 @@ const NavMenu = () => {
           <div className="menu-logo">
             <Link href="/">HAVEN</Link>
           </div>
-          <div className="menu-open" onClick={toggleMenu}>
+          <div className="menu-open" onClick={() => toggleMenu()}>
             <p>MENU</p>
           </div>
         </div>
@@ -84,11 +100,11 @@ const NavMenu = () => {
             <div className="menu-logo">
               <Link href="/">HAVEN</Link>
             </div>
-            <div className="menu-close" onClick={toggleMenu}>
+            <div className="menu-close" onClick={() => toggleMenu()}>
               <p>CLOSE</p>
             </div>
           </div>
-          <div className="menu-close-icon" onClick={toggleMenu}>
+          <div className="menu-close-icon" onClick={() => toggleMenu()}>
             <div className="menu-close-icon-box">
               <div className="menu-close-icon-box-item">
                 <div className="menu-close-icon-box-holder">
@@ -110,7 +126,10 @@ const NavMenu = () => {
                     <Link
                       href={link.path}
                       className="menu-link"
-                      onClick={toggleMenu}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleMenu(link.path);
+                      }}
                     >
                       {link.label}
                     </Link>

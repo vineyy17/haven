@@ -8,11 +8,14 @@ import { gsap } from '@/lib/gsap';
 import { useRef } from 'react';
 import '@/styles/components/HomeAboutSection.scss';
 import Button from './Button';
-import { split } from '@/animations/text';
+
 import { useGSAP } from '@gsap/react';
 
 const HomeAboutSection = () => {
-  const images = [Picture1, Picture2];
+  const images = [
+    'https://res.cloudinary.com/dqfzpmj9n/image/upload/v1719806012/new-wide_susvr7.webp',
+    'https://res.cloudinary.com/dqfzpmj9n/image/upload/v1719806013/ffr_yljrjo.webp',
+  ];
   const imagesRef = useRef([]);
   const container = useRef();
 
@@ -54,7 +57,7 @@ const HomeAboutSection = () => {
                 ref={(el) => (imagesRef.current[i] = el)}
                 className="homeAbout__wrapper__image"
               >
-                <Image src={image} placeholder="blur" alt="image" fill />
+                <Image src={image} alt="image" fill />
               </div>
             );
           })}

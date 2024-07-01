@@ -4,7 +4,7 @@
   min-height: 100vh;
   height: toRem(1315);
   @extend %hero;
-  background-image: url('../../assets/images/Hero\ Image.png');
+  background-image: url('https://res.cloudinary.com/dqfzpmj9n/image/upload/v1719806372/Hero_Image_v8pzwr.png');
   background-blend-mode: darken;
 
   @include media('<=desktop') {

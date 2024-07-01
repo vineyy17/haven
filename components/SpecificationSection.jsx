@@ -53,9 +53,12 @@ const SpecificationSection = () => {
         <div className="specPage__container__imageBox">
           <Image
             ref={imageRef}
-            src={manImage}
+            src="https://res.cloudinary.com/dqfzpmj9n/image/upload/v1719806534/medium-shot-artisan_1_shnrwu.jpg"
             alt="carpenter image"
             className="specPage__container__imageBox__image"
+            width={0}
+            height={0}
+            sizes="100vw"
           />
         </div>
         <p className="specPage__container__bottomText">

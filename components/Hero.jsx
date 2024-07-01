@@ -8,15 +8,16 @@ import Button from './Button';
 import dynamic from 'next/dynamic';
 import { useMediaQuery } from 'react-responsive';
 import Image from 'next/image';
-import imageSrc from '@/assets/images/875.jpg';
+// import imageSrc from '@/assets/images/875.jpg';
 import NavMenu from './NavMenu';
 import { split } from '@/animations/text';
 import useIsomorphicLayoutEffect from '@/hooks/useIsomorphicLayoutEffect';
 import { useGSAP } from '@gsap/react';
+import Scene from './Scene';
 
-const Scene = dynamic(() => import('@/components/Scene'), {
-  ssr: false,
-});
+// const Scene = dynamic(() => import('@/components/Scene'), {
+//   ssr: false,
+// });
 
 const Hero = () => {
   const app = useRef(null);
@@ -112,9 +113,8 @@ const Hero = () => {
                   <Image
                     height={280}
                     width={230}
-                    src={imageSrc}
+                    src="https://res.cloudinary.com/dqfzpmj9n/image/upload/v1719805828/875_sfafe7.jpg"
                     alt="Model"
-                    placeholder="blur"
                     className="main__about__model__image"
                   />
                 )}
