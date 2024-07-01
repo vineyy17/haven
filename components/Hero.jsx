@@ -74,7 +74,7 @@ const Hero = () => {
     <div className="homePage">
       <NavMenu />
       <div className="main" ref={app}>
-        <p className="main__heading" data-animation="bounce">
+        <p className="main__heading" data-animation="h">
           HAVEN
         </p>
         <div className="main__about">

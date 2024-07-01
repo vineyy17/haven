@@ -53,7 +53,7 @@ const ShowreelPreview = () => {
         />
       </div>
       <div className="sReelP__textContainer">
-        <p className="sReelP__textContainer__text">
+        <p data-animation="h" className="sReelP__textContainer__text">
           At Haven, we understand that your home is your refuge. Our mission is
           to design furniture that not only serves a purpose but also enhances
           the tranquility and beauty of your space, creating a true haven of

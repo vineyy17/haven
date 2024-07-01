@@ -10,7 +10,7 @@ const AnimatedLink = ({ color, url, children, type }) => {
       <span className="y__link_wrap">
         <span
           className={`y__link_txt y__link_txt--${color}  y__link_txt_mobilenav y__link_txt_${type} `}
-          {...(type === 'heading' ? { 'data-animation': 'bounce' } : {})}
+          {...(type === 'heading' ? { 'data-animation': 'h' } : {})}
         >
           {children}
         </span>

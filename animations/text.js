@@ -5,7 +5,9 @@ import gsap from 'gsap';
 export const split = () => {
   const blurredText = document.querySelectorAll("[data-animation='blurIn']");
   const opacIn = document.querySelectorAll("[data-animation='opacIn']");
+  const custom = document.querySelectorAll("[data-animation='custom']");
   const H = document.querySelectorAll("[data-animation='h']");
+
   const p = document.querySelectorAll("[data-animation='p']");
   const B = document.querySelectorAll("[data-animation='bounce']");
 
@@ -105,6 +107,29 @@ export const split = () => {
     });
   });
 
+  custom.forEach((item) => {
+    Splitting({
+      target: item,
+      by: 'chars',
+    });
+    gsap.set(item.querySelectorAll('.char'), {
+      opacity: 0,
+      yPercent: 100,
+      transformStyle: 'preserve-3d',
+    });
+    IO(item).then(() => {
+      const elem = item.querySelectorAll('.char');
+      gsap.to(elem, {
+        opacity: 1,
+        yPercent: 0,
+        delay: 1.2,
+        stagger: elem.length > 100 ? 0.01 : 0.02,
+        duration: elem.length > 100 ? 0.5 : 0.6,
+        ease: 'easeOut',
+      });
+    });
+  });
+
   H.forEach((item) => {
     Splitting({
       target: item,
@@ -115,9 +140,7 @@ export const split = () => {
       yPercent: 100,
       transformStyle: 'preserve-3d',
     });
-    IO(item, {
-      threshold: 1,
-    }).then(() => {
+    IO(item).then(() => {
       const elem = item.querySelectorAll('.char');
       gsap.to(elem, {
         opacity: 1,
@@ -153,29 +176,5 @@ export const split = () => {
         },
       );
     });
-  });
-
-  const elem = document.querySelectorAll('.y__home_hero_content_bold');
-  elem.forEach((item) => {
-    Splitting({
-      target: item,
-      by: 'chars',
-    });
-    const left = item.querySelectorAll('.char');
-    gsap.fromTo(
-      left,
-      {
-        xPercent: -400,
-        opacity: 0,
-      },
-      {
-        xPercent: 0,
-        duration: 4,
-        delay: 1.2,
-        stagger: 0.005,
-        opacity: 1,
-        ease: 'elastic.out(1, 0.3)',
-      },
-    );
   });
 };

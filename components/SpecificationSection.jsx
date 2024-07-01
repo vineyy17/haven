@@ -12,6 +12,10 @@ const SpecificationSection = () => {
   const container = useRef();
   const imageRef = useRef(null);
 
+  // useEffect(() => {
+  //   split();
+  // }, [])
+
   useGSAP(
     () => {
       const image = imageRef.current;
@@ -45,7 +49,7 @@ const SpecificationSection = () => {
     <div className="specPage">
       <div className="specPage__container" ref={container}>
         <h2 data-animation="h">Crafting Chairs: A Blend of Materials</h2>
-        <p data-animation="p" className="specPage__container__paragraph">
+        <p data-animation="h" className="specPage__container__paragraph">
           Chairs can be made from wood, metal, or other strong materials, like
           stone or acrylic. In some cases, multiple materials are used to
           construct a chair.

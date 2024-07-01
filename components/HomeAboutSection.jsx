@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Picture1 from '@/assets/images/new-wide.webp';
 import Picture2 from '@/assets/images/ffr.webp';
 import Image from 'next/image';
@@ -10,6 +10,7 @@ import '@/styles/components/HomeAboutSection.scss';
 import Button from './Button';
 
 import { useGSAP } from '@gsap/react';
+import { split } from '@/animations/text';
 
 const HomeAboutSection = () => {
   const images = [
@@ -19,9 +20,12 @@ const HomeAboutSection = () => {
   const imagesRef = useRef([]);
   const container = useRef();
 
+  // useEffect(() => {
+  //   split();
+  // }, []);
+
   useGSAP(
     () => {
-      // split();
       const mm = gsap.matchMedia();
 
       mm.add('(min-width: 1000px)', () => {
@@ -68,7 +72,7 @@ const HomeAboutSection = () => {
             LIFE THROUGH DESIGN.
           </h2>
           <div className="homeAbout__wrapper__text__paragraph">
-            <p data-animation="p">
+            <p data-animation="h">
               Our furniture collection blends modern design with classic appeal,
               crafted to transform your living spaces and make them uniquely
               yours.

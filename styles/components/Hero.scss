@@ -20,8 +20,8 @@
     text-transform: uppercase;
     display: block;
     font-weight: 900;
-    color: $col-cream;
     font-family: var(--font-playfair);
+    color: $col-cream;
 
     @include media('<=tablet') {
       margin-right: 0rem;
