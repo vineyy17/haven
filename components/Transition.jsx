@@ -15,7 +15,7 @@ const Transition = () => {
     const tl = gsap.timeline();
 
     tl.set('.y__transition', {
-      yPercent: 0,
+      yPercent: -100,
     })
       .set('.y__transition_scene', {
         clipPath: 'polygon(0 0, 0 0, 0 100%, 0 100%)',

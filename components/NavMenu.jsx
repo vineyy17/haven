@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import '@/styles/components/NavMenu.scss';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -19,17 +18,12 @@ const menuLinks = [
 
 const NavMenu = () => {
   const currentPath = usePathname();
-  const router = useRouter();
   const container = useRef();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [navigatePath, setNavigatePath] = useState(null);
 
   const tl = useRef();
 
-  const toggleMenu = (path = null) => {
-    if (path) {
-      setNavigatePath(path);
-    }
+  const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
@@ -73,17 +67,6 @@ const NavMenu = () => {
     }
   }, [isMenuOpen]);
 
-  useEffect(() => {
-    if (!isMenuOpen && navigatePath) {
-      const timeoutId = setTimeout(() => {
-        router.push(navigatePath);
-        setNavigatePath(null);
-      }, 2000);
-
-      return () => clearTimeout(timeoutId);
-    }
-  }, [isMenuOpen, navigatePath, router]);
-
   return (
     <div className="menu-parent">
       <div className="menu-container" ref={container}>
@@ -123,14 +106,7 @@ const NavMenu = () => {
                       'menu-link-item-holder--active'
                     }`}
                   >
-                    <Link
-                      href={link.path}
-                      className="menu-link"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        toggleMenu(link.path);
-                      }}
-                    >
+                    <Link href={link.path} className="menu-link">
                       {link.label}
                     </Link>
                   </div>

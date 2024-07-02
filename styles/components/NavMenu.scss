@@ -18,6 +18,10 @@
   justify-content: space-between;
   align-items: center;
   z-index: 3;
+
+  @include media('<=phone-tab') {
+    padding: 1em;
+  }
 }
 
 .menu-overlay-bar {
