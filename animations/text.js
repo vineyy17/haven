@@ -6,6 +6,8 @@ export const split = () => {
   const blurredText = document.querySelectorAll("[data-animation='blurIn']");
   const opacIn = document.querySelectorAll("[data-animation='opacIn']");
   const custom = document.querySelectorAll("[data-animation='custom']");
+  const bCustom = document.querySelectorAll("[data-animation='bouncecustom']");
+  const hCustom = document.querySelectorAll("[data-animation='hCustom']");
   const H = document.querySelectorAll("[data-animation='h']");
 
   const p = document.querySelectorAll("[data-animation='p']");
@@ -130,6 +132,29 @@ export const split = () => {
     });
   });
 
+  hCustom.forEach((item) => {
+    Splitting({
+      target: item,
+      by: 'chars',
+    });
+    gsap.set(item.querySelectorAll('.char'), {
+      opacity: 0,
+      yPercent: 100,
+      transformStyle: 'preserve-3d',
+    });
+    IO(item).then(() => {
+      const elem = item.querySelectorAll('.char');
+      gsap.to(elem, {
+        opacity: 1,
+        yPercent: 0,
+        delay: 1.5,
+        stagger: elem.length > 100 ? 0.01 : 0.02,
+        duration: elem.length > 100 ? 0.5 : 0.6,
+        ease: 'easeOut',
+      });
+    });
+  });
+
   H.forEach((item) => {
     Splitting({
       target: item,
@@ -170,6 +195,31 @@ export const split = () => {
           yPercent: 0,
           opacity: 1,
           delay: 1.2,
+          duration: 3,
+          stagger: 0.05,
+          ease: 'elastic.out(1, 0.3)',
+        },
+      );
+    });
+  });
+
+  bCustom.forEach((item) => {
+    Splitting({
+      target: item,
+      by: 'chars',
+    });
+    IO(item).then(() => {
+      const elem = item.querySelectorAll('.char');
+      gsap.fromTo(
+        elem,
+        {
+          yPercent: 40,
+          opacity: 0,
+        },
+        {
+          yPercent: 0,
+          opacity: 1,
+          delay: 0.5,
           duration: 3,
           stagger: 0.05,
           ease: 'elastic.out(1, 0.3)',

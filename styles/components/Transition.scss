@@ -9,7 +9,7 @@
   width: 100%;
   left: 0;
   height: 100vh;
-  background: $primary-text;
+  background: #e7e3d8;
   padding: 5rem;
 
   display: flex;
@@ -24,7 +24,7 @@
   &_scene {
     width: 100%;
     height: 100%;
-    background: #948979;
+    background: #fefefe;
     @include media('<=tablet') {
       height: 70%;
       // background: none;
@@ -48,9 +48,10 @@
       text-align: center;
       font-weight: 400;
       line-height: 1.2;
-      letter-spacing: -0.065em;
+      letter-spacing: -0.05em;
+      // letter-spacing: -0.065em;
       text-transform: uppercase;
-      color: white;
+      color: $dark-brown;
 
       @include media('<=tablet') {
         font-size: 4rem;

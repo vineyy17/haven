@@ -14,6 +14,11 @@ span.word_wrap {
   overflow-y: hidden;
   position: relative;
 }
+[data-animation='hCustom'] span.word {
+  overflow-y: hidden;
+  position: relative;
+}
+
 [data-animation='opacIn'] span.word {
   position: relative;
   overflow: auto !important;
