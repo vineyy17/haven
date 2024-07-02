@@ -1,0 +1,76 @@
+@use '/styles/main.scss' as *;
+
+.contact {
+  min-height: 38rem;
+  padding-top: 4rem;
+  position: relative;
+
+  @include media('<=tablet') {
+    min-height: 29rem;
+  }
+  @include media('<=phone-tab') {
+    min-height: 20rem;
+  }
+
+  &__box {
+    width: 40rem;
+    height: fit-content;
+    margin: 0 auto;
+
+    &__top {
+      height: 8rem;
+      border: max(8px, 1rem) solid $col-milch;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        font-family: var(--font-manrope);
+        font-size: 4rem;
+        text-align: center;
+        font-weight: 400;
+        // line-height: 1.2;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+        color: $col-milch;
+
+        @include media('<=tablet') {
+          font-size: 2rem;
+        }
+
+        @include media('<=phone-tab') {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    &__bottom {
+      background-color: $col-milch;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+
+      p {
+        text-align: justify;
+        line-height: 153%;
+        color: $dark-brown;
+        font-size: 0.8rem;
+        width: toRem(400);
+
+        @include media('<=phone-tab') {
+          font-size: 0.8rem;
+          width: 100%;
+          text-align: justify;
+          margin: 0;
+        }
+      }
+
+      &__button {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}

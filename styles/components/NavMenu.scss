@@ -6,7 +6,7 @@
 
 .menu-container {
   position: relative;
-  z-index: 5;
+  z-index: 20;
 }
 
 .menu-bar {
@@ -17,7 +17,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 3;
+  z-index: 20;
 
   @include media('<=phone-tab') {
     padding: 1em;
@@ -33,7 +33,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 3;
+  z-index: 20;
 }
 
 .menu-bar a,
@@ -51,7 +51,7 @@
   height: 100vh;
   padding: 2em;
   background-color: $secondary;
-  z-index: 3;
+  z-index: 20;
   display: flex;
   text-align: left;
   clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);

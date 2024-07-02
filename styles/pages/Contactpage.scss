@@ -1,0 +1,10 @@
+@use '/styles/main.scss' as *;
+
+.contactPage {
+  min-height: 100vh;
+
+  &__container {
+    background-image: url('../../assets/images/empty-modern-room-with-furniture\ \(3\).jpg');
+    background-size: cover;
+  }
+}

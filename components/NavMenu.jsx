@@ -16,7 +16,7 @@ const menuLinks = [
   { path: '/showreel', label: 'Showreel' },
 ];
 
-const NavMenu = () => {
+const NavMenu = ({ type }) => {
   const currentPath = usePathname();
   const container = useRef();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
