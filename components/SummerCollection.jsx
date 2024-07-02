@@ -105,6 +105,7 @@ const SummerCollection = () => {
                       width={0}
                       height={0}
                       sizes="100vw"
+                      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8fv1oPQAINAMEp+xU5QAAAABJRU5ErkJggg=="
                     />
                     <div className="shopInfo__product__details">
                       <p className="shopInfo__product__details__name">

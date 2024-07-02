@@ -20,10 +20,6 @@ const HomeAboutSection = () => {
   const imagesRef = useRef([]);
   const container = useRef();
 
-  // useEffect(() => {
-  //   split();
-  // }, []);
-
   useGSAP(
     () => {
       const mm = gsap.matchMedia();
@@ -61,7 +57,13 @@ const HomeAboutSection = () => {
                 ref={(el) => (imagesRef.current[i] = el)}
                 className="homeAbout__wrapper__image"
               >
-                <Image src={image} alt="image" fill />
+                <Image
+                  src={image}
+                  alt="image"
+                  fill
+                  priority
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8fv1oPQAINAMEp+xU5QAAAABJRU5ErkJggg=="
+                />
               </div>
             );
           })}

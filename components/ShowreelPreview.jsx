@@ -50,6 +50,8 @@ const ShowreelPreview = () => {
           width={0}
           height={0}
           sizes="100vw"
+          priority
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8fv1oPQAINAMEp+xU5QAAAABJRU5ErkJggg=="
         />
       </div>
       <div className="sReelP__textContainer">

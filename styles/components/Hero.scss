@@ -21,7 +21,7 @@
     display: block;
     font-weight: 900;
     font-family: var(--font-playfair);
-    color: #fff5ee;
+    color: $secondary;
 
     @include media('<=tablet') {
       margin-right: 0rem;

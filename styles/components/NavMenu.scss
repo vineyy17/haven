@@ -36,6 +36,7 @@
 .menu-open p {
   color: $col-milch;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .menu-overlay {
@@ -45,7 +46,7 @@
   width: 100vw;
   height: 100vh;
   padding: 2em;
-  background-color: #fff5ee;
+  background-color: $secondary;
   z-index: 3;
   display: flex;
   text-align: left;
@@ -55,11 +56,13 @@
     .menu-logo a {
       color: #000;
       cursor: pointer;
+      font-weight: 500;
     }
 
     .menu-close p {
       color: #000;
       cursor: pointer;
+      font-weight: 500;
     }
   }
 }
@@ -76,7 +79,7 @@
 
   p {
     font-size: toRem(100);
-    -webkit-text-stroke: toRem(3) #fff5ee;
+    -webkit-text-stroke: toRem(3) $secondary;
     line-height: 80%;
     color: #000;
   }
