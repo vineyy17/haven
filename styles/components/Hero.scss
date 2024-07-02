@@ -21,7 +21,7 @@
     display: block;
     font-weight: 900;
     font-family: var(--font-playfair);
-    color: $col-cream;
+    color: #fff5ee;
 
     @include media('<=tablet') {
       margin-right: 0rem;
@@ -66,7 +66,7 @@
 
     &__button {
       @include media('<=tablet') {
-        margin-left: max(30px, 3rem);
+        margin-left: max(30px, 2rem);
       }
 
       @include media('<=phone-tab') {

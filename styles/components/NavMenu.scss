@@ -45,7 +45,7 @@
   width: 100vw;
   height: 100vh;
   padding: 2em;
-  background-color: $col-cream;
+  background-color: #fff5ee;
   z-index: 3;
   display: flex;
   text-align: left;
@@ -76,7 +76,7 @@
 
   p {
     font-size: toRem(100);
-    -webkit-text-stroke: toRem(3) $col-cream;
+    -webkit-text-stroke: toRem(3) #fff5ee;
     line-height: 80%;
     color: #000;
   }

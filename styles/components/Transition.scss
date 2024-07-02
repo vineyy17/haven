@@ -52,13 +52,13 @@
       text-transform: uppercase;
       color: white;
 
-      // @include media('<=tablet') {
-      //   font-size: 6rem;
-      // }
+      @include media('<=tablet') {
+        font-size: 4rem;
+      }
 
-      // @include media('<=phone-tab') {
-      //   font-size: 3rem;
-      // }
+      @include media('<=phone-tab') {
+        font-size: 3rem;
+      }
     }
   }
 }
