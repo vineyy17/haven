@@ -1,21 +1,52 @@
 @use '/styles/main.scss' as *;
 
 .contact {
-  min-height: 38rem;
-  padding-top: 4rem;
+  min-height: 100vh;
+  padding-top: 6rem;
   position: relative;
+  box-sizing: border-box;
+
+  visibility: 0;
+  opacity: 0;
+
+  @include media('<=desktop') {
+    padding-top: 10rem;
+    min-height: 70vh;
+  }
 
   @include media('<=tablet') {
-    min-height: 29rem;
+    padding-top: 5rem;
+    min-height: 100vh;
   }
+
   @include media('<=phone-tab') {
-    min-height: 20rem;
+    padding-top: 9rem;
+    min-height: 100vh;
   }
+
+  //   @include media('<=tablet') {
+  //     min-height: 29rem;
+  //   }
+  //   @include media('<=phone-tab') {
+  //     min-height: 20rem;
+  //   }
 
   &__box {
     width: 40rem;
     height: fit-content;
     margin: 0 auto;
+
+    @include media('<=desktop') {
+      width: 50rem;
+    }
+
+    @include media('<=tablet') {
+      width: 30rem;
+    }
+
+    @include media('<=phone-tab') {
+      width: 20rem;
+    }
 
     &__top {
       height: 8rem;
@@ -23,6 +54,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      @include media('<=phone-tab') {
+        height: 5rem;
+      }
 
       p {
         font-family: var(--font-manrope);
@@ -34,8 +69,12 @@
         text-transform: uppercase;
         color: $col-milch;
 
+        @include media('<=desktop') {
+          font-size: 5rem;
+        }
+
         @include media('<=tablet') {
-          font-size: 2rem;
+          font-size: 3rem;
         }
 
         @include media('<=phone-tab') {
@@ -59,11 +98,20 @@
         font-size: 0.8rem;
         width: toRem(400);
 
-        @include media('<=phone-tab') {
+        @include media('<=desktop') {
+          font-size: 1.2rem;
+          width: 600;
+        }
+
+        @include media('<=tablet') {
           font-size: 0.8rem;
-          width: 100%;
+          width: toRem(300);
           text-align: justify;
           margin: 0;
+        }
+
+        @include media('<=phone-tab') {
+          width: toRem(200);
         }
       }
 

@@ -1,10 +1,14 @@
 @use '/styles/main.scss' as *;
 
 .contactPage {
-  min-height: 100vh;
+  min-height: max-content;
 
   &__container {
     background-image: url('../../assets/images/empty-modern-room-with-furniture\ \(3\).jpg');
     background-size: cover;
+
+    @include media('<=tablet') {
+      background-position: center;
+    }
   }
 }

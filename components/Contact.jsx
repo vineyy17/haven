@@ -1,10 +1,28 @@
-import React from 'react';
+'use client';
+
+import React, { useRef } from 'react';
 import '@/styles/components/Contact.scss';
 import Button from './Button';
+import useIsomorphicLayoutEffect from '@/hooks/useIsomorphicLayoutEffect';
+import { gsap } from '@/lib/gsap';
 
 const Contact = () => {
+  const app = useRef(null);
+
+  useIsomorphicLayoutEffect(() => {
+    const tl = gsap.timeline();
+    const init = () => {
+      tl.from(app.current, { ease: 'linear', autoAlpha: 0 }).to(app.current, {
+        ease: 'linear',
+        autoAlpha: 1,
+      });
+    };
+
+    init();
+  }, []);
+
   return (
-    <div className="contact">
+    <div className="contact" ref={app}>
       <div className="contact__box">
         <div className="contact__box__top">
           <p>Reach out to us</p>
