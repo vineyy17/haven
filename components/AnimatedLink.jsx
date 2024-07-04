@@ -1,18 +1,24 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
-import { gsap } from '@/lib/gsap';
+import React from 'react';
 import '@/styles/components/AnimatedLink.scss';
+import Link from 'next/link';
 
 const AnimatedLink = ({ color, url, children, type }) => {
   return (
     <a href={url} target="_blank" rel="noopener noreferrer" className="y__link">
       <span className="y__link_wrap">
         <span
-          className={`y__link_txt y__link_txt--${color}  y__link_txt_mobilenav y__link_txt_${type} `}
+          className={`y__link_txt y__link_txt--${color} y__link_txt_mobilenav y__link_txt_${type}`}
           {...(type === 'heading' ? { 'data-animation': 'h' } : {})}
         >
-          {children}
+          {type === 'heading' || type === 'custom' ? (
+            <Link href={url}>{children}</Link>
+          ) : (
+            <a href={url} target="_blank" rel="noopener noreferrer">
+              {children}
+            </a>
+          )}
         </span>
       </span>
 

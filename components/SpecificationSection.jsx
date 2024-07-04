@@ -64,11 +64,13 @@ const SpecificationSection = () => {
             height={0}
             sizes="100vw"
             priority
-            blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8fv1oPQAINAMEp+xU5QAAAABJRU5ErkJggg=='
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8fv1oPQAINAMEp+xU5QAAAABJRU5ErkJggg=="
           />
         </div>
         <p className="specPage__container__bottomText">
-          <AnimatedLink type="heading">Explore our collection</AnimatedLink>
+          <AnimatedLink type="heading" url="/contact">
+            Explore our collection
+          </AnimatedLink>
         </p>
       </div>
     </div>

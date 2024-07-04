@@ -10,10 +10,10 @@ import AnimatedLink from './AnimatedLink';
 
 const menuLinks = [
   { path: '/', label: 'Home' },
-  { path: '/about', label: 'About' },
-  { path: '/shop', label: 'Shop' },
+  { path: '/contact', label: 'About' },
+  { path: '/contact', label: 'Shop' },
   { path: '/contact', label: 'Contact' },
-  { path: '/showreel', label: 'Showreel' },
+  { path: '/contact', label: 'Showreel' },
 ];
 
 const NavMenu = ({ color }) => {
@@ -74,7 +74,10 @@ const NavMenu = ({ color }) => {
           <div className={`menu-logo menu-logo--${color}`}>
             <Link href="/">HAVEN</Link>
           </div>
-          <div className={`menu-open menu-open--${color}`} onClick={() => toggleMenu()}>
+          <div
+            className={`menu-open menu-open--${color}`}
+            onClick={() => toggleMenu()}
+          >
             <p>MENU</p>
           </div>
         </div>
@@ -117,10 +120,18 @@ const NavMenu = ({ color }) => {
               <div className="menu-info-col">
                 <div className="menu-info-col-item">
                   <div className="menu-info-col-holder">
-                    <AnimatedLink>Twitter</AnimatedLink>
-                    <AnimatedLink>Linkedin</AnimatedLink>
-                    <AnimatedLink>Email</AnimatedLink>
-                    <AnimatedLink>Github</AnimatedLink>
+                    <AnimatedLink url="https://twitter.com/The_vine__">
+                      Twitter
+                    </AnimatedLink>
+                    <AnimatedLink url="https://www.linkedin.com/in/viney17">
+                      Linkedin
+                    </AnimatedLink>
+                    <AnimatedLink url="mailto:officialkb17@gmail.com">
+                      Email
+                    </AnimatedLink>
+                    <AnimatedLink url="https://github.com/vineyy17">
+                      Github
+                    </AnimatedLink>
                   </div>
                 </div>
               </div>
@@ -131,7 +142,9 @@ const NavMenu = ({ color }) => {
             <div className="menu-preview-box">
               <div className="menu-preview-box-item">
                 <div className="menu-preview-box-holder">
-                  <AnimatedLink>Explore</AnimatedLink>
+                  <AnimatedLink type="custom" url="/contact">
+                    Explore
+                  </AnimatedLink>
                 </div>
               </div>
             </div>
