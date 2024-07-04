@@ -16,7 +16,7 @@ const menuLinks = [
   { path: '/showreel', label: 'Showreel' },
 ];
 
-const NavMenu = ({ type }) => {
+const NavMenu = ({ color }) => {
   const currentPath = usePathname();
   const container = useRef();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -70,8 +70,8 @@ const NavMenu = ({ type }) => {
   return (
     <div className="menu-parent">
       <div className="menu-container" ref={container}>
-        <div className="menu-bar">
-          <div className="menu-logo">
+        <div className={`menu-bar menu-bar--${color}`}>
+          <div className={`menu-logo menu-logo--${color}`}>
             <Link href="/">HAVEN</Link>
           </div>
           <div className="menu-open" onClick={() => toggleMenu()}>
@@ -80,7 +80,7 @@ const NavMenu = ({ type }) => {
         </div>
         <div className="menu-overlay">
           <div className="menu-overlay-bar">
-            <div className="menu-logo">
+            <div className={`menu-logo menu-logo--${color}`}>
               <Link href="/">HAVEN</Link>
             </div>
             <div className="menu-close" onClick={() => toggleMenu()}>

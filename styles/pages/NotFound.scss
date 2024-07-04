@@ -1,0 +1,81 @@
+@use '/styles/main.scss' as *;
+
+.y__error {
+  min-height: 100vh;
+  background-color: $col-milch;
+  @include media('<=tablet') {
+    min-height: 100vh;
+  }
+  //   @include flex_col(4rem);
+  overflow-x: hidden;
+  &_wrap {
+    position: relative;
+    &_marquee {
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+      padding-top: 5rem;
+      @include media('<=tablet') {
+        padding-top: 8rem;
+      }
+      .span_slider {
+        @include flex(space-between, center, 1rem);
+        flex-wrap: nowrap;
+        overflow: scroll;
+        &_wrap {
+          animation: marquee 30s linear 0s infinite normal forwards;
+          span {
+            display: inline-block;
+          }
+          font-size: toRem(200);
+          font-weight: 400;
+          @include media('<=tablet') {
+            font-size: toRem(120);
+            animation-duration: 20s;
+          }
+          @include media('<=phone-tab') {
+            font-size: toRem(100);
+          }
+          color: $dark-brown;
+          @include flex(center, center, 0);
+          font-family: var(--font-manrope);
+          text-transform: uppercase;
+          flex-wrap: nowrap;
+          overflow: visible;
+          gap: 3rem;
+          flex-shrink: 0;
+        }
+      }
+    }
+
+    &_inner {
+      z-index: 5;
+      position: relative;
+      @include flex_col(2rem);
+      align-items: center;
+      text-align: center;
+
+      p {
+        width: 38%;
+        margin: 0 auto;
+        color: $dark-brown;
+        @include media('<=tablet') {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+.y_linkout {
+  text-transform: uppercase;
+  font-size: toRem(22);
+}
+@keyframes marquee {
+  0% {
+    transform: translate(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

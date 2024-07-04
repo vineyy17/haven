@@ -6,9 +6,6 @@
   position: relative;
   box-sizing: border-box;
 
-  visibility: 0;
-  opacity: 0;
-
   @include media('<=desktop') {
     padding-top: 10rem;
     min-height: 70vh;

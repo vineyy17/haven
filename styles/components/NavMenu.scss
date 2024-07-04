@@ -43,6 +43,13 @@
   font-weight: 500;
 }
 
+.menu-bar--brown a,
+.menu-open p {
+  color: $dark-brown;
+  cursor: pointer;
+  font-weight: 500;
+}
+
 .menu-overlay {
   position: fixed;
   top: 0;
