@@ -19,6 +19,10 @@
   align-items: center;
   z-index: 20;
 
+  a {
+    color: $col-milch;
+  }
+
   @include media('<=phone-tab') {
     padding: 1em;
   }
@@ -44,7 +48,7 @@
 }
 
 .menu-bar--brown a,
-.menu-open p {
+.menu-open--brown p {
   color: $dark-brown;
   cursor: pointer;
   font-weight: 500;

@@ -27,7 +27,7 @@ const Hero = () => {
   const image = useRef(null);
   const container = useRef();
 
-  const isDesktop = useMediaQuery({ query: '(min-width: 1000px)' });
+  const isDesktop = useMediaQuery({ query: '(min-width: 1050px)' });
 
   useIsomorphicLayoutEffect(() => {
     const tl = gsap.timeline();
@@ -46,7 +46,7 @@ const Hero = () => {
     () => {
       const mm = gsap.matchMedia();
 
-      mm.add('(min-width: 1000px)', () => {
+      mm.add('(min-width: 1050px)', () => {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: container.current,
@@ -74,7 +74,7 @@ const Hero = () => {
     <div className="homePage">
       <NavMenu />
       <div className="main" ref={app}>
-        <p className="main__heading" data-animation="custom">
+        <p className="main__heading" data-animation="h">
           HAVEN
         </p>
         <div className="main__about">

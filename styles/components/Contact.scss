@@ -2,22 +2,25 @@
 
 .contact {
   min-height: 100vh;
-  padding-top: 6rem;
   position: relative;
   box-sizing: border-box;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   @include media('<=desktop') {
-    padding-top: 10rem;
+    // padding-top: 10rem;
     min-height: 70vh;
   }
 
   @include media('<=tablet') {
-    padding-top: 5rem;
+    // padding-top: 5rem;
     min-height: 100vh;
   }
 
   @include media('<=phone-tab') {
-    padding-top: 9rem;
+    // padding-top: 9rem;
     min-height: 100vh;
   }
 

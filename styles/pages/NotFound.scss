@@ -1,23 +1,30 @@
 @use '/styles/main.scss' as *;
 
 .y__error {
-  min-height: 100vh;
+  //   min-height: 100vh;
   background-color: $col-milch;
-  @include media('<=tablet') {
-    min-height: 100vh;
-  }
-  //   @include flex_col(4rem);
+  //   @include media('<=tablet') {
+  //     min-height: 100vh;
+  //   }
+
   overflow-x: hidden;
   &_wrap {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    min-height: 80vh;
+    @include media('<=phone-tab') {
+      min-height: 43rem;
+    }
+
     &_marquee {
       overflow: hidden;
       position: relative;
       z-index: 1;
-      padding-top: 5rem;
-      @include media('<=tablet') {
-        padding-top: 8rem;
-      }
+
       .span_slider {
         @include flex(space-between, center, 1rem);
         flex-wrap: nowrap;
@@ -54,6 +61,10 @@
       @include flex_col(2rem);
       align-items: center;
       text-align: center;
+
+      @include media('<=phone-tab') {
+        padding-top: 2rem;
+      }
 
       p {
         width: 38%;

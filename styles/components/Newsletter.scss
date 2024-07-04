@@ -12,6 +12,11 @@
   position: relative;
   z-index: 5;
 
+  @include media('<=desktop') {
+    min-height: 50vh;
+    padding-top: 1.1rem;
+  }
+
   @include media('<=tablet') {
     min-height: 29rem;
     padding-top: 1.1rem;

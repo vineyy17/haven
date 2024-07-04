@@ -13,7 +13,7 @@ const Newsletter = () => {
     () => {
       const mm = gsap.matchMedia();
 
-      mm.add('(min-width: 1000px)', () => {
+      mm.add('(min-width: 1050px)', () => {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: container.current,

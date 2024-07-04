@@ -101,6 +101,7 @@
         @include media('<=desktop') {
           margin-top: 3.3rem;
         }
+
         @include media('<=tablet') {
           font-size: 2.3rem;
           margin-top: 3.5rem;
@@ -123,7 +124,11 @@
       height: 28rem;
 
       @include media('<=tablet') {
-        height: 23rem;
+        height: fit-content;
+      }
+
+      @include media('<=tablet') {
+        height: fit-content;
       }
 
       &__image {
@@ -150,6 +155,7 @@
 
       @include media('<=desktop') {
         margin-top: 3.3rem;
+        margin-bottom: 3.3rem;
       }
 
       @include media('<=tablet') {
@@ -159,8 +165,8 @@
 
       @include media('<=phone-tab') {
         font-size: 2rem;
-        margin-top: 0rem;
-        margin-bottom: 2.5rem;
+        margin-top: 1.9rem;
+        // margin-bottom: 2.5rem;
         letter-spacing: -0.04em;
       }
     }

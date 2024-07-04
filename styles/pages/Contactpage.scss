@@ -4,8 +4,13 @@
   min-height: max-content;
 
   &__container {
-    background-image: url('../../assets/images/empty-modern-room-with-furniture\ \(3\).jpg');
+    background-image: url('https://res.cloudinary.com/dqfzpmj9n/image/upload/v1720081432/empty-modern-room-with-furniture_3_1_cfj5rk.jpg');
     background-size: cover;
+    background-color: $dark-brown;
+
+    @include media('<=desktop') {
+      background-position: center;
+    }
 
     @include media('<=tablet') {
       background-position: center;

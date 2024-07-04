@@ -10,12 +10,13 @@
 
   @include media('<=desktop') {
     @include flex_col(1.5rem);
-    height: 105rem;
+    min-height: fit-content;
+    height: fit-content;
   }
 
   @include media('<=tablet') {
     @include flex_col(1.5rem);
-    height: 75rem;
+    height: fit-content;
   }
 
   @include media('<=phone-tab') {

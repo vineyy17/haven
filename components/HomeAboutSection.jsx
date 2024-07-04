@@ -10,7 +10,6 @@ import '@/styles/components/HomeAboutSection.scss';
 import Button from './Button';
 
 import { useGSAP } from '@gsap/react';
-import { split } from '@/animations/text';
 
 const HomeAboutSection = () => {
   const images = [
@@ -24,7 +23,7 @@ const HomeAboutSection = () => {
     () => {
       const mm = gsap.matchMedia();
 
-      mm.add('(min-width: 1000px)', () => {
+      mm.add('(min-width: 1050px)', () => {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: container.current,

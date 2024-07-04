@@ -15,6 +15,7 @@ export default function Template({ children }) {
       'https://res.cloudinary.com/dqfzpmj9n/image/upload/v1719892368/scandinavian-living-room-interior-design-zoom-background_1_rui1xk.jpg',
       'https://res.cloudinary.com/dqfzpmj9n/image/upload/v1719805828/875_sfafe7.jpg',
       'https://res.cloudinary.com/dqfzpmj9n/image/upload/v1719806580/empty-modern-room-with-furniture_2_sb7d2c.jpg',
+      'https://res.cloudinary.com/dqfzpmj9n/image/upload/v1720081432/empty-modern-room-with-furniture_3_1_cfj5rk.jpg',
     ];
 
     console.log('Preloading started');

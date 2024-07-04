@@ -74,7 +74,7 @@ const NavMenu = ({ color }) => {
           <div className={`menu-logo menu-logo--${color}`}>
             <Link href="/">HAVEN</Link>
           </div>
-          <div className="menu-open" onClick={() => toggleMenu()}>
+          <div className={`menu-open menu-open--${color}`} onClick={() => toggleMenu()}>
             <p>MENU</p>
           </div>
         </div>
