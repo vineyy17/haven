@@ -4,6 +4,10 @@ import '@/styles/pages/NotFound.scss';
 import Button from '@/components/Button';
 import Footer from '@/components/Footer';
 
+export const metadata = {
+  title: 'Haven - 404',
+};
+
 const NotFoundPage = () => {
   return (
     <div class="y__error">
