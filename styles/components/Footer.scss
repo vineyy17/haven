@@ -9,7 +9,6 @@
   margin: 1rem;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   background-position-x: 50%;
   background-position-y: center;
   z-index: 1;
@@ -26,7 +25,6 @@
   }
 
   @include media('<phone-tab') {
-    background-attachment: scroll;
     height: 20rem;
   }
 

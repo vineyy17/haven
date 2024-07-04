@@ -7,10 +7,6 @@ import SpecificationSection from '@/components/SpecificationSection';
 import SummerCollection from '@/components/SummerCollection';
 // import dynamic from 'next/dynamic';
 
-// const Hero = dynamic(() => import('@/components/Hero'), {
-//   ssr: false,
-// });
-
 const HomePage = () => {
   return (
     <>
