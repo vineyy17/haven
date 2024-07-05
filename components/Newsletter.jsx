@@ -4,10 +4,12 @@ import React, { useRef } from 'react';
 import '@/styles/components/Newsletter.scss';
 import { useGSAP } from '@gsap/react';
 import { gsap } from '@/lib/gsap';
+import { useRouter } from 'next/navigation';
 
 const Newsletter = () => {
   const boxRef = useRef();
   const container = useRef();
+  const router = useRouter();
 
   useGSAP(
     () => {
@@ -50,7 +52,10 @@ const Newsletter = () => {
                 className="newsletter__box__inner__input"
                 placeholder="Enter your email"
               />
-              <div className="newsletter__box__inner__circle">
+              <div
+                className="newsletter__box__inner__circle"
+                onClick={() => router.push('/contact')}
+              >
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

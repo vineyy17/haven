@@ -62,7 +62,9 @@ const ShowreelPreview = () => {
           comfort and elegance.
         </p>
         <div className="sReelP__textContainer__button">
-          <Button color="brown">See showreel</Button>
+          <Button href="/contact" color="brown">
+            See showreel
+          </Button>
         </div>
       </div>
     </div>

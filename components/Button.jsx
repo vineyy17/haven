@@ -1,37 +1,22 @@
-import Link from 'next/link';
+'use client';
+
 import '@/styles/components/Button.scss';
+import { useRouter } from 'next/navigation';
 
-function Button({ children, type, disabled, href, onClick, color }) {
-  if (href)
-    return (
-      <Link className={`c-button c-button--${color}`} href={href}>
-        <span className="c-link">
-          <span className="c-link__inner">
-            <span>{children}</span>
-            <span className="c-link__animated">{children}</span>
-          </span>
-        </span>
-      </Link>
-    );
+function Button({ children, href, color }) {
+  const router = useRouter();
 
-  if (onClick)
-    return (
-      <button
-        className={`c-button c-button--${color}`}
-        disabled={disabled}
-        onClick={onClick}
-      >
-        <span className="c-link">
-          <span className="c-link__inner">
-            <span>{children}</span>
-            <span className="c-link__animated">{children}</span>
-          </span>
-        </span>
-      </button>
-    );
+  const handleClick = () => {
+    if (href) {
+      router.push(href);
+    }
+  };
 
   return (
-    <button className={`c-button c-button--${color}`} disabled={disabled}>
+    <button
+      className={`c-button c-button--${color}`}
+      onClick={href ? handleClick : null}
+    >
       {children}
       <div className={`c-button__icon c-button__icon--${color}`}>
         <span>

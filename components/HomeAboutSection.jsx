@@ -80,7 +80,9 @@ const HomeAboutSection = () => {
             </p>
           </div>
 
-          <Button color="brown">About us</Button>
+          <Button href="/contact" color="brown">
+            About us
+          </Button>
         </div>
       </div>
     </div>

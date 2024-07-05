@@ -92,7 +92,9 @@ const Hero = () => {
             </span>
           </p>
           <div className="main__about__button">
-            <Button color="milch">Explore Collection</Button>
+            <Button href="/contact" color="milch">
+              Explore Collection
+            </Button>
           </div>
 
           <div ref={container}>

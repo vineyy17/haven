@@ -57,12 +57,21 @@
     }
 
     &__left {
-      p {
+      display: flex;
+      flex-direction: column;
+      p,
+      a {
         line-height: 153%;
         color: $dark-brown;
         font-size: 1rem;
         text-transform: uppercase;
         font-weight: 500;
+        transition: all 0.5s ease-in;
+
+        &:hover {
+          text-decoration: underline;
+          transition: all 0.5s ease-in;
+        }
 
         @include media('<=tablet') {
           font-size: 0.8rem;
@@ -70,10 +79,10 @@
         @include media('<=phone-tab') {
           font-size: 0.6rem;
         }
+      }
 
-        span {
-          text-decoration: underline;
-        }
+      .name {
+        text-decoration: underline;
       }
     }
 
@@ -106,12 +115,15 @@
     }
 
     &__right {
-      p {
+      display: flex;
+      flex-direction: column;
+      a {
         line-height: 153%;
         color: $dark-brown;
         font-size: 1rem;
         text-transform: uppercase;
         font-weight: 500;
+        transition: all 0.5s ease-in;
 
         @include media('<tablet') {
           font-size: 0.8rem;
@@ -119,6 +131,11 @@
 
         @include media('<=phone-tab') {
           font-size: 0.6rem;
+        }
+
+        &:hover {
+          text-decoration: underline;
+          transition: all 0.5s ease-in;
         }
       }
     }

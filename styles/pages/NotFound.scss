@@ -15,7 +15,10 @@
     align-items: center;
     flex-direction: column;
 
-    min-height: 80vh;
+    min-height: 100vh;
+    @include media('<=desktop') {
+      min-height: 80vh;
+    }
     @include media('<=phone-tab') {
       min-height: 43rem;
     }

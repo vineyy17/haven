@@ -59,6 +59,8 @@ const NavMenu = ({ color }) => {
     { scope: container },
   );
 
+  const text = useRef(null);
+
   useEffect(() => {
     if (isMenuOpen) {
       tl.current.play();
@@ -103,12 +105,7 @@ const NavMenu = ({ color }) => {
             <div className="menu-links">
               {menuLinks.map((link, index) => (
                 <div key={index} className="menu-link-item">
-                  <div
-                    className={`menu-link-item-holder ${
-                      link.path === currentPath &&
-                      'menu-link-item-holder--active'
-                    }`}
-                  >
+                  <div className="menu-link-item-holder">
                     <Link href={link.path} className="menu-link">
                       {link.label}
                     </Link>

@@ -33,7 +33,9 @@ const NotFoundPage = () => {
             you&apos;re here, why not browse our exquisite furniture collection?
             Your dream home awaits!
           </p>
-          <Button color="brown">Back to home</Button>
+          <Button href="/" color="brown">
+            Back to home
+          </Button>
           <br />
           <br />
         </div>

@@ -69,7 +69,9 @@ const SummerCollection = () => {
         <div className="shopInfo__top">
           <h2>Featured Products</h2>
           <div className="shopInfo__top__right">
-            <Button color="brown">See all products</Button>
+            <Button color="brown" href="/contact">
+              See all products
+            </Button>
           </div>
         </div>
 
@@ -123,7 +125,9 @@ const SummerCollection = () => {
         </div>
       </div>
       <div className="collectionPage__bottom">
-        <Button color="brown">Shop our products</Button>
+        <Button href="/contact" color="brown">
+          Shop our products
+        </Button>
       </div>
     </div>
   );

@@ -25,7 +25,13 @@ const Contact = () => {
             project.
           </p>
           <div className="contact__box__bottom__button">
-            <Button color="brown">Contact us</Button>
+            <a
+              href="mailto:officialkb17@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button color="brown">Contact us</Button>
+            </a>
           </div>
         </div>
       </div>

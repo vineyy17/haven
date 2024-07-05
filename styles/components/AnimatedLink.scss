@@ -46,6 +46,7 @@
 
       a {
         color: #000000;
+        font-weight: 500;
       }
     }
 
@@ -77,6 +78,7 @@
 
       a {
         color: $dark-brown;
+        font-weight: 500;
       }
 
       @include media('<=phone-tab') {
