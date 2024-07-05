@@ -5,6 +5,7 @@ import Newsletter from '@/components/Newsletter';
 import ShowreelPreview from '@/components/ShowreelPreview';
 import SpecificationSection from '@/components/SpecificationSection';
 import SummerCollection from '@/components/SummerCollection';
+import Head from 'next/head';
 // import dynamic from 'next/dynamic';
 
 // const Hero = dynamic(() => import('@/components/Hero'), {
@@ -47,6 +48,10 @@ import SummerCollection from '@/components/SummerCollection';
 const HomePage = () => {
   return (
     <>
+      <Head>
+        <link rel="icon" href="/public/favicon-32x32.png" />
+        <link rel="apple-touch-icon" href="/public/apple-touch-icon.png>" />
+      </Head>
       <Hero />
       <HomeAboutSection />
       <SpecificationSection />
