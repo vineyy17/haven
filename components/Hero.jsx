@@ -15,10 +15,6 @@ import useIsomorphicLayoutEffect from '@/hooks/useIsomorphicLayoutEffect';
 import { useGSAP } from '@gsap/react';
 import Scene from './Scene';
 
-// const Scene = dynamic(() => import('@/components/Scene'), {
-//   ssr: false,
-// });
-
 const Hero = () => {
   const app = useRef(null);
   const title = useRef(null);

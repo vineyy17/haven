@@ -2,9 +2,15 @@
 
 import React, { useEffect, useState } from 'react';
 import '@/styles/components/PageTransition.scss';
-import Transition from '@/components/Transition';
+// import Transition from '@/components/Transition';
 import scroll from '@/animations/scroll';
 import { preloadImages } from '@/utils/preload';
+
+import dynamic from 'next/dynamic';
+
+const Transition = dynamic(() => import('@/components/Transition'), {
+  ssr: false,
+});
 
 export default function Template({ children }) {
   const [showChildren, setShowChildren] = useState(false);

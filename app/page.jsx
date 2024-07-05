@@ -7,6 +7,43 @@ import SpecificationSection from '@/components/SpecificationSection';
 import SummerCollection from '@/components/SummerCollection';
 // import dynamic from 'next/dynamic';
 
+// const Hero = dynamic(() => import('@/components/Hero'), {
+//   ssr: false,
+// });
+
+// const HomeAboutSection = dynamic(
+//   () => import('@/components/HomeAboutSection'),
+//   {
+//     ssr: false,
+//   },
+// );
+
+// const SpecificationSection = dynamic(
+//   () => import('@/components/SpecificationSection'),
+//   {
+//     ssr: false,
+//   },
+// );
+
+// const SummerCollection = dynamic(
+//   () => import('@/components/SummerCollection'),
+//   {
+//     ssr: false,
+//   },
+// );
+
+// const ShowreelPreview = dynamic(() => import('@/components/ShowreelPreview'), {
+//   ssr: false,
+// });
+
+// const Newsletter = dynamic(() => import('@/components/Newsletter'), {
+//   ssr: false,
+// });
+
+// const Footer = dynamic(() => import('@/components/Footer'), {
+//   ssr: false,
+// });
+
 const HomePage = () => {
   return (
     <>
