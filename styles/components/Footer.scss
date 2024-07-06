@@ -52,8 +52,9 @@
 
     @include media('<=phone-tab') {
       padding: 0.5rem;
-      padding-right: 2.5rem;
+      padding-right: 0.5rem;
       height: 20rem;
+      position: relative;
     }
 
     &__left {

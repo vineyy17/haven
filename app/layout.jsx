@@ -24,6 +24,10 @@ export const metadata = {
   title: 'Haven - Modern and Elegant Decor',
   description: 'Purchase your dream furniture',
   keywords: 'chairs, furniture, buy chairs, buy furniture',
+  openGraph: {
+    images:
+      'https://res.cloudinary.com/dqfzpmj9n/image/upload/v1719892368/scandinavian-living-room-interior-design-zoom-background_1_rui1xk.jpg',
+  },
 };
 
 const MainLayout = ({ children }) => {
