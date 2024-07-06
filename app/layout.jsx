@@ -36,7 +36,10 @@ const MainLayout = ({ children }) => {
       <Head>
         <link rel="icon" href="/public/favicon-32x32.png" />
         <link rel="apple-touch-icon" href="/public/apple-touch-icon.png>" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
         <meta property="og:title" content="Haven" />
         <meta
           property="og:description"
