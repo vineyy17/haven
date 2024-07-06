@@ -76,12 +76,12 @@
 
         font-family: var(--font-manrope);
         font-weight: 400;
-        font-size: toRem(14);
+        font-size: toRem(17);
         line-height: toRem(19.69);
 
         @include media('<=phone-tab') {
           height: toRem(30);
-          font-size: toRem(10);
+          font-size: toRem(17);
         }
       }
 
